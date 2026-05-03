@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "wp-content/uploads"
+public_folder: "/wp-content/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string", default: "RCCC"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Categories", name: "categories", widget: "list", default: ["Reviews"], required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Visitations Table"
+        name: "visitations"
+        file: "visitations.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - label: "Scores on the Doors"
+        name: "scores"
+        file: "scores-on-the-doors.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - label: "Welcome"
+        name: "welcome"
+        file: "welcome.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Body", name: "body", widget: "markdown"}

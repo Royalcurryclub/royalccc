@@ -1,0 +1,52 @@
+# Site settings
+title: "The Royal Curry Club of Christchurch"
+description: "Led by our inspirational Maharaja, we are an exclusive group of reputable gentlemen who meet monthly to savour curry and beer."
+url: "https://royalccc.netlify.app"  # Change this to your actual Netlify URL after deployment
+baseurl: ""
+
+# Theme
+theme: minima
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - SETUP_GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "RCCC"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Header navigation links (for minima theme)
+header_pages:
+  - reviews.md
+  - visitations.md
+  - scores-on-the-doors.md
+  - welcome.md
+  - contact.md
