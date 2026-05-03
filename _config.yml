@@ -4,6 +4,12 @@ description: "Led by our inspirational Maharaja, we are an exclusive group of re
 url: "https://royalccc.netlify.app"  # Change this to your actual Netlify URL after deployment
 baseurl: ""
 
+# SEO / social sharing
+logo: /assets/img/favicon-512.png
+social:
+  name: The Royal Curry Club of Christchurch
+  links: []
+
 # Theme
 theme: minima
 

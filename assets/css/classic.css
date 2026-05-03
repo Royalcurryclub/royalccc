@@ -467,3 +467,273 @@ a:hover {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+/* ============================================
+   PRINT STYLES (Visitations / Scores tables)
+   ============================================ */
+
+@media print {
+  /* Hide UI chrome - we just want the data */
+  .site-header,
+  .site-nav,
+  .site-footer,
+  .table-search-wrapper,
+  .table-stat,
+  #rccc-post-index,
+  script {
+    display: none !important;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 18mm 14mm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  .post-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic;
+    color: #6B1E1E !important;
+    font-size: 22pt;
+    margin: 0 0 8pt 0;
+    page-break-after: avoid;
+  }
+
+  /* Add a tagline under the title for print context */
+  .post-title::after {
+    content: " — The Royal Curry Club of Christchurch, EST. MMXV";
+    display: block;
+    font-style: normal;
+    font-family: -apple-system, "Helvetica", sans-serif;
+    font-size: 9pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8B6914;
+    margin-top: 4pt;
+  }
+
+  /* Table tweaks */
+  .post-content table,
+  .page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white !important;
+    border: 1pt solid #6B1E1E !important;
+    page-break-inside: auto;
+    font-size: 9pt;
+  }
+
+  .post-content table th,
+  .page-content table th {
+    background: #FAF4E6 !important;
+    color: black !important;
+    border-bottom: 1pt solid #6B1E1E !important;
+    padding: 4pt 6pt;
+    text-align: left;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .post-content table td,
+  .page-content table td {
+    border: 0.5pt solid #ccc !important;
+    padding: 3pt 6pt;
+  }
+
+  .post-content table tr:nth-child(even),
+  .page-content table tr:nth-child(even) {
+    background: #FAF4E6 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Don't break rows across pages */
+  .post-content table tr,
+  .page-content table tr {
+    page-break-inside: avoid;
+  }
+
+  /* Make links plain text for print (URL printing would be noise) */
+  .post-content a,
+  .page-content a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+}
+
+/* ============================================
+   REVIEWS PAGE — year-grouped list
+   ============================================ */
+
+.reviews-jumpnav {
+  margin: 16px 0 32px;
+  padding: 12px 16px;
+  background: rgba(242, 232, 208, 0.4);
+  border: 1px solid #C9A961;
+  border-radius: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  color: #4A2C1A;
+  text-align: center;
+}
+
+.reviews-jumpnav a {
+  color: #6B1E1E;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.reviews-jumpnav a:hover {
+  text-decoration: underline;
+}
+
+.reviews-year {
+  margin-bottom: 28px;
+}
+
+.reviews-year-heading {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic;
+  font-size: 28px;
+  color: #6B1E1E !important;
+  margin: 24px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #C9A961;
+  scroll-margin-top: 24px; /* offset for in-page anchor jumps */
+}
+
+.reviews-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-list li {
+  border-bottom: 1px dotted #C9A961;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.reviews-list li:last-child {
+  border-bottom: none;
+}
+
+.reviews-list a {
+  color: #2C1810 !important;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.reviews-list a:hover {
+  color: #6B1E1E !important;
+}
+
+/* ============================================
+   AVERAGE SCORE BANNER (Scores page)
+   ============================================ */
+
+.table-stat {
+  margin: 16px 0 20px;
+  padding: 16px 20px;
+  background: rgba(242, 232, 208, 0.5);
+  border-left: 3px solid #6B1E1E;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #4A2C1A;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.table-stat strong {
+  color: #6B1E1E;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ============================================
+   POST NAVIGATION (previous/next review)
+   ============================================ */
+
+.post-nav {
+  display: flex;
+  gap: 24px;
+  margin: 48px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid #C9A961;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+.post-nav-prev,
+.post-nav-next {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-nav-next {
+  text-align: right;
+}
+
+.post-nav a {
+  display: block;
+  text-decoration: none !important;
+  color: #2C1810 !important;
+}
+
+.post-nav a:hover .post-nav-title {
+  color: #6B1E1E;
+}
+
+.post-nav-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8B6914;
+  margin-bottom: 6px;
+}
+
+.post-nav-title {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #2C1810;
+  line-height: 1.3;
+}
+
+@media (max-width: 599px) {
+  .post-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .post-nav-next {
+    text-align: left;
+  }
+}
+
+/* ============================================
+   LINKED TABLE ROWS (visitations cross-link)
+   ============================================ */
+
+/* When the layout's JS injects a link inside a table cell,
+   make it look like the rest of the table (no underlines, etc.) */
+.post-content table td a,
+.page-content table td a {
+  color: #6B1E1E;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+
+.post-content table td a:hover,
+.page-content table td a:hover {
+  border-bottom-color: #6B1E1E;
+}

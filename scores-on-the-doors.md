@@ -4,6 +4,7 @@ title: 'Scores on the Doors'
 date: '2019-01-03T23:03:17+13:00'
 author: RCCC
 layout: table-page
+show_average_score: true
 guid: 'http://royalccc.net/?page_id=302'
 ---
 | When | Visitation | Service /5 | Food /5 | Total /10 |

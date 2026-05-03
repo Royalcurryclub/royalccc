@@ -8,5 +8,114 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
+
+  <script>
+    // h and createClass are globals exposed by Netlify CMS
+    var h = window.h;
+    var createClass = window.createClass;
+
+    // === Custom preview styles to roughly match the live site ===
+    CMS.registerPreviewStyle("data:text/css;charset=utf-8," + encodeURIComponent(`
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+      body {
+        background: #FAF4E6;
+        color: #2C1810;
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        padding: 32px 40px;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+      h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        color: #6B1E1E;
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 0 0 8px 0;
+      }
+      h2, h3, h4 {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: #6B1E1E;
+      }
+      .post-meta {
+        color: #8B6914;
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      a { color: #6B1E1E; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid #C9A961;
+        margin: 16px 0;
+      }
+      th {
+        background: #F2E8D0;
+        color: #2C1810;
+        border-bottom: 1px solid #C9A961;
+        padding: 8px;
+        text-align: left;
+        font-family: -apple-system, sans-serif;
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+      td {
+        border: 1px solid #E8DCC0;
+        padding: 8px;
+      }
+      tr:nth-child(even) { background: rgba(242, 232, 208, 0.3); }
+      strong { color: #2C1810; }
+      hr { border: none; border-top: 1px solid #C9A961; margin: 24px 0; }
+      blockquote {
+        border-left: 3px solid #C9A961;
+        margin-left: 0;
+        padding-left: 16px;
+        color: #4A2C1A;
+        font-style: italic;
+      }
+    `));
+
+    // === Preview template for blog posts ===
+    var BlogPostPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || 'Untitled';
+        var date = entry.getIn(['data', 'date']);
+        var author = entry.getIn(['data', 'author']) || '';
+
+        var dateStr = '';
+        if (date) {
+          try {
+            var d = new Date(date);
+            dateStr = d.toLocaleDateString('en-NZ', { year: 'numeric', month: 'short', day: 'numeric' });
+          } catch (e) { dateStr = String(date); }
+        }
+
+        return h('article', {},
+          h('h1', {}, title),
+          h('p', { className: 'post-meta' }, dateStr + (author ? ' • ' + author : '')),
+          h('div', {}, this.props.widgetFor('body'))
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('posts', BlogPostPreview);
+
+    // === Preview template for the static pages ===
+    var PagePreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || '';
+        return h('article', {},
+          h('h1', {}, title),
+          h('div', {}, this.props.widgetFor('body'))
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('visitations', PagePreview);
+    CMS.registerPreviewTemplate('scores', PagePreview);
+  </script>
 </body>
 </html>

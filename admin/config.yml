@@ -13,8 +13,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Author", name: "author", widget: "string", default: "RCCC"}
+      - {label: "Publish Date", name: "date", widget: "datetime", default: ""}
+      - {label: "Author", name: "author", widget: "string", default: "RoyalCCC Reviewer"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Categories", name: "categories", widget: "list", default: ["Reviews"], required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -27,7 +27,7 @@ collections:
         file: "visitations.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "table-page"}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - label: "Scores on the Doors"
@@ -35,13 +35,24 @@ collections:
         file: "scores-on-the-doors.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "table-page"}
+          - {label: "Show average score", name: "show_average_score", widget: "hidden", default: true}
           - {label: "Body", name: "body", widget: "markdown"}
 
-      - label: "Welcome"
-        name: "welcome"
-        file: "welcome.md"
+      - label: "Home page"
+        name: "home"
+        file: "home.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/home/"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - label: "Contact page"
+        name: "contact"
+        file: "contact.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/"}
           - {label: "Body", name: "body", widget: "markdown"}

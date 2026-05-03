@@ -7,6 +7,10 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
+  {%- if page.show_average_score -%}
+  <div class="table-stat" id="table-stat" aria-live="polite"></div>
+  {%- endif -%}
+
   <div class="table-search-wrapper">
     <input
       type="search"
@@ -24,33 +28,212 @@ layout: default
 
 </article>
 
+{%- comment -%}
+  Build a map of "month year" => post URL so JavaScript can wire up
+  links from the visitations table to the corresponding review.
+
+  IMPORTANT: We use the post TITLE (which contains the visitation month) rather
+  than post.date (which is the publish date and may be off by months).
+  E.g. a post titled "March 2024 – MG Road Eatery..." may have date 2024-06-18
+  because it was written up months later.
+{%- endcomment -%}
+<script id="rccc-post-index" type="application/json">
+{
+  "posts": [
+    {%- for post in site.posts -%}
+    {
+      "url": {{ post.url | relative_url | jsonify }},
+      "title": {{ post.title | jsonify }},
+      "fallback_year":  {{ post.date | date: "%Y" | jsonify }},
+      "fallback_month": {{ post.date | date: "%m" | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
 <script>
 (function () {
-  var input = document.getElementById('table-search');
-  var counter = document.getElementById('table-search-count');
-  if (!input) return;
-
-  // Find the first <table> inside the post content
   var content = document.querySelector('.post-content');
   if (!content) return;
   var table = content.querySelector('table');
   if (!table) return;
-
   var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
   var totalRows = rows.length;
+
+  // ---- Load post index and pre-compute (year, month) from each title ----
+  var postIndex = [];
+  try {
+    var indexEl = document.getElementById('rccc-post-index');
+    if (indexEl) {
+      postIndex = JSON.parse(indexEl.textContent).posts || [];
+    }
+  } catch (e) {}
+
+  // Month name → number map (also handles short forms via slice(0,3))
+  var monthMap = {
+    jan: '01', feb: '02', mar: '03', apr: '04', may: '05', jun: '06',
+    jul: '07', aug: '08', sep: '09', oct: '10', nov: '11', dec: '12'
+  };
+
+  // Extract visitation month/year from a post title.
+  // Titles look like: "March 2024 – MG Road Eatery & Two Thumbs Brewery"
+  //                   "November 2024 Annual Outing – NZ vs..."
+  function parseTitleDate(title) {
+    var m = title.toLowerCase().match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{4})/);
+    if (!m) return null;
+    return { month: monthMap[m[1]], year: m[2] };
+  }
+
+  // Annotate each post with its title-derived month/year (with fallback to date)
+  postIndex.forEach(function (p) {
+    var parsed = parseTitleDate(p.title);
+    if (parsed) {
+      p.month = parsed.month;
+      p.year = parsed.year;
+    } else {
+      p.month = p.fallback_month;
+      p.year = p.fallback_year;
+    }
+  });
+
+  // ---- Find a post that matches a row by (month, year) and optionally restaurant text ----
+  function findPostForRow(rowText) {
+    var lower = rowText.toLowerCase();
+
+    // Try patterns to extract month and year from row text
+    // Visitations: "01 Jun 2015 Coriander's ..."
+    // Scores:      "Dec-24 Indian Fendalton ..."
+    var match = lower.match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*[-\s]\s*(\d{2,4})/);
+    if (!match) return null;
+
+    var monthNum = monthMap[match[1]];
+    var yearStr = match[2];
+    var fullYear = yearStr.length === 2 ? '20' + yearStr : yearStr;
+
+    // Find candidate posts in that year+month
+    var candidates = postIndex.filter(function (p) {
+      return p.year === fullYear && p.month === monthNum;
+    });
+    if (candidates.length === 0) return null;
+    if (candidates.length === 1) return candidates[0];
+
+    // Multiple posts in the same month — match by restaurant name overlap.
+    // Tokenise row text, find post whose title shares the most words.
+    var rowTokens = lower.replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(function (t) { return t.length > 3; });
+    var best = null;
+    var bestScore = 0;
+    candidates.forEach(function (p) {
+      var titleLower = p.title.toLowerCase();
+      var score = 0;
+      rowTokens.forEach(function (t) {
+        if (titleLower.indexOf(t) !== -1) score++;
+      });
+      if (score > bestScore) {
+        bestScore = score;
+        best = p;
+      }
+    });
+    return best || candidates[0];
+  }
+
+  // ---- Wire up links on each row that doesn't already have one ----
+  // Find table headers to figure out which column has the establishment name
+  var headers = Array.prototype.slice.call(table.querySelectorAll('thead th, tbody:first-child > tr:first-child > th'));
+  if (headers.length === 0 && rows.length > 0) {
+    // fallback: first row may be the header
+    headers = Array.prototype.slice.call(rows[0].querySelectorAll('th'));
+  }
+  var targetColIndex = -1;
+  headers.forEach(function (h, i) {
+    var t = h.textContent.toLowerCase();
+    if (targetColIndex === -1 && (
+        t.indexOf('curry establishment') !== -1 ||
+        t.indexOf('visitation') !== -1 ||
+        t.indexOf('restaurant') !== -1
+    )) {
+      targetColIndex = i;
+    }
+  });
+
+  rows.forEach(function (row) {
+    if (row.querySelector('a')) return; // Already has a link, leave it
+
+    var post = findPostForRow(row.textContent);
+    if (!post) return;
+
+    var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+    if (cells.length === 0) return;
+
+    // Prefer the targetColIndex if available
+    var targetCell = (targetColIndex >= 0 && targetColIndex < cells.length)
+      ? cells[targetColIndex]
+      : cells[0];
+
+    // Wrap that cell's content in a link
+    var origText = targetCell.innerHTML;
+    targetCell.innerHTML = '<a href="' + post.url + '">' + origText + '</a>';
+  });
+
+  // ---- Compute average score (only if data attribute is set) ----
+  var statEl = document.getElementById('table-stat');
+  if (statEl) {
+    // Walk rows looking for /5 or /10 number patterns
+    var serviceScores = [];
+    var foodScores = [];
+    var totalScores = [];
+    rows.forEach(function (row) {
+      var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+      // Look for /5 cells: typical structure is service /5, food /5, total /10
+      // Try parsing each cell as a float
+      var nums = cells.map(function (c) {
+        var v = parseFloat(c.textContent.trim());
+        return isNaN(v) ? null : v;
+      }).filter(function (v) { return v !== null; });
+      // If we have 3 numbers and the last is roughly the sum of the first two, treat as service/food/total
+      if (nums.length >= 3) {
+        var s = nums[nums.length - 3];
+        var f = nums[nums.length - 2];
+        var t = nums[nums.length - 1];
+        if (s <= 5 && f <= 5 && t <= 10) {
+          serviceScores.push(s);
+          foodScores.push(f);
+          totalScores.push(t);
+        }
+      }
+    });
+
+    function avg(arr) {
+      if (arr.length === 0) return null;
+      return arr.reduce(function (a, b) { return a + b; }, 0) / arr.length;
+    }
+
+    var avgS = avg(serviceScores);
+    var avgF = avg(foodScores);
+    var avgT = avg(totalScores);
+
+    if (avgT !== null) {
+      statEl.innerHTML =
+        'Across <strong>' + totalScores.length + '</strong> rated visitations, the RCCC has scored an average of ' +
+        '<strong>' + avgS.toFixed(1) + '/5</strong> for service, ' +
+        '<strong>' + avgF.toFixed(1) + '/5</strong> for food, ' +
+        'and a total of <strong>' + avgT.toFixed(1) + '/10</strong>.';
+    }
+  }
+
+  // ---- Search box logic ----
+  var input = document.getElementById('table-search');
+  var counter = document.getElementById('table-search-count');
+  if (!input) return;
 
   function updateCount(matched) {
     if (input.value.trim() === '') {
       counter.textContent = '';
       return;
     }
-    if (matched === 0) {
-      counter.textContent = 'No matches';
-    } else if (matched === 1) {
-      counter.textContent = '1 match';
-    } else {
-      counter.textContent = matched + ' matches of ' + totalRows;
-    }
+    if (matched === 0) counter.textContent = 'No matches';
+    else if (matched === 1) counter.textContent = '1 match';
+    else counter.textContent = matched + ' matches of ' + totalRows;
   }
 
   function applyFilter() {
@@ -60,12 +243,9 @@ layout: default
       updateCount(totalRows);
       return;
     }
-    // Split query on whitespace - all terms must match (AND search)
     var terms = q.split(/\s+/);
     var matched = 0;
     rows.forEach(function (r) {
-      // Search corpus = visible text + any link URLs in the row
-      // (URLs often contain full year, e.g. "december-2024-..." which the visible "Dec-24" cell doesn't show)
       var corpus = r.textContent;
       var links = r.querySelectorAll('a');
       for (var i = 0; i < links.length; i++) {
@@ -84,8 +264,6 @@ layout: default
   }
 
   input.addEventListener('input', applyFilter);
-
-  // ESC clears the search
   input.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       input.value = '';
@@ -94,7 +272,6 @@ layout: default
     }
   });
 
-  // Allow ?q=foo to pre-populate the search (useful for shareable links)
   var params = new URLSearchParams(window.location.search);
   var initial = params.get('q');
   if (initial) {
