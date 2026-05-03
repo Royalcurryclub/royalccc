@@ -3,7 +3,7 @@ id: 302
 title: 'Scores on the Doors'
 date: '2019-01-03T23:03:17+13:00'
 author: RCCC
-layout: page
+layout: table-page
 guid: 'http://royalccc.net/?page_id=302'
 ---
 | When | Visitation | Service /5 | Food /5 | Total /10 |

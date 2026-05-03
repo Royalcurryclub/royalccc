@@ -405,3 +405,65 @@ a:hover {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+/* ============================================
+   TABLE SEARCH (visitations / scores)
+   ============================================ */
+
+.table-search-wrapper {
+  margin: 16px 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.table-search-input {
+  flex: 1;
+  min-width: 220px;
+  max-width: 480px;
+  padding: 10px 14px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #2C1810;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #C9A961;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.table-search-input::placeholder {
+  color: #8B6914;
+  opacity: 0.8;
+}
+
+.table-search-input:focus {
+  border-color: #6B1E1E;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Hide the default 'X' clear button on WebKit (we use ESC instead) - looks tidier */
+.table-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  background: linear-gradient(45deg, transparent 45%, #8B6914 45%, #8B6914 55%, transparent 55%),
+              linear-gradient(-45deg, transparent 45%, #8B6914 45%, #8B6914 55%, transparent 55%);
+  cursor: pointer;
+  opacity: 0.6;
+}
+.table-search-input::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+
+.table-search-count {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #8B6914;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

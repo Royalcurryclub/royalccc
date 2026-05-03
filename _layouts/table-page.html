@@ -1,0 +1,105 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="table-search-wrapper">
+    <input
+      type="search"
+      class="table-search-input"
+      id="table-search"
+      placeholder="Search this table…"
+      aria-label="Search the table"
+      autocomplete="off">
+    <span class="table-search-count" id="table-search-count" aria-live="polite"></span>
+  </div>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
+
+<script>
+(function () {
+  var input = document.getElementById('table-search');
+  var counter = document.getElementById('table-search-count');
+  if (!input) return;
+
+  // Find the first <table> inside the post content
+  var content = document.querySelector('.post-content');
+  if (!content) return;
+  var table = content.querySelector('table');
+  if (!table) return;
+
+  var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+  var totalRows = rows.length;
+
+  function updateCount(matched) {
+    if (input.value.trim() === '') {
+      counter.textContent = '';
+      return;
+    }
+    if (matched === 0) {
+      counter.textContent = 'No matches';
+    } else if (matched === 1) {
+      counter.textContent = '1 match';
+    } else {
+      counter.textContent = matched + ' matches of ' + totalRows;
+    }
+  }
+
+  function applyFilter() {
+    var q = input.value.trim().toLowerCase();
+    if (q === '') {
+      rows.forEach(function (r) { r.style.display = ''; });
+      updateCount(totalRows);
+      return;
+    }
+    // Split query on whitespace - all terms must match (AND search)
+    var terms = q.split(/\s+/);
+    var matched = 0;
+    rows.forEach(function (r) {
+      // Search corpus = visible text + any link URLs in the row
+      // (URLs often contain full year, e.g. "december-2024-..." which the visible "Dec-24" cell doesn't show)
+      var corpus = r.textContent;
+      var links = r.querySelectorAll('a');
+      for (var i = 0; i < links.length; i++) {
+        corpus += ' ' + (links[i].getAttribute('href') || '');
+      }
+      corpus = corpus.toLowerCase();
+      var allMatch = terms.every(function (t) { return corpus.indexOf(t) !== -1; });
+      if (allMatch) {
+        r.style.display = '';
+        matched++;
+      } else {
+        r.style.display = 'none';
+      }
+    });
+    updateCount(matched);
+  }
+
+  input.addEventListener('input', applyFilter);
+
+  // ESC clears the search
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      input.value = '';
+      applyFilter();
+      input.blur();
+    }
+  });
+
+  // Allow ?q=foo to pre-populate the search (useful for shareable links)
+  var params = new URLSearchParams(window.location.search);
+  var initial = params.get('q');
+  if (initial) {
+    input.value = initial;
+    applyFilter();
+  }
+})();
+</script>

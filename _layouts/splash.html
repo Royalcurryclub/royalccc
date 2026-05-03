@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title | default: site.name }}</title>
+  {%- seo -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #FAF4E6;
+      color: #2C1810;
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    }
+
+    .splash {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .splash-logo-link {
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .splash-logo-link:hover {
+      transform: scale(1.03);
+    }
+
+    .splash-logo {
+      max-width: 480px;
+      width: 80vw;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .splash-logo { width: 75vw; }
+    }
+
+    .splash-message {
+      margin-top: 40px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(22px, 4vw, 38px);
+      line-height: 1.3;
+      color: #6B1E1E;
+      max-width: 800px;
+      letter-spacing: -0.5px;
+    }
+
+    .splash-hint {
+      margin-top: 32px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #8B6914;
+      text-transform: uppercase;
+    }
+
+    .splash-hint a {
+      color: #8B6914;
+      text-decoration: none;
+      border-bottom: 1px dotted #8B6914;
+    }
+
+    .splash-hint a:hover {
+      color: #6B1E1E;
+      border-bottom-color: #6B1E1E;
+    }
+
+    /* Subtle entrance animation */
+    @keyframes splashFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .splash-logo-link, .splash-message, .splash-hint {
+      animation: splashFadeIn 0.8s ease-out backwards;
+    }
+    .splash-logo-link { animation-delay: 0.05s; }
+    .splash-message  { animation-delay: 0.35s; }
+    .splash-hint     { animation-delay: 0.65s; }
+  </style>
+</head>
+<body>
+
+  <main class="splash">
+    <a href="/home/" class="splash-logo-link" id="splash-link" aria-label="Enter the site">
+      <img src="" alt="The Royal Curry Club of Christchurch" class="splash-logo" id="splash-logo" width="800" height="650">
+    </a>
+
+    <div class="splash-message">
+      Stop the fucking press!! We have a website?!?!?!??!!
+    </div>
+
+    <div class="splash-hint">
+      <a href="/home/">Click the crest to enter →</a>
+    </div>
+  </main>
+
+  <script>
+    // Pick a random logo each page load
+    var logos = [
+      "/assets/img/logo-1.png",
+      "/assets/img/logo-2.png",
+      "/assets/img/logo-3.png",
+      "/assets/img/logo-4.png",
+      "/assets/img/logo-5.png",
+      "/assets/img/logo-6.png",
+      "/assets/img/logo-7.png"
+    ];
+    var pick = logos[Math.floor(Math.random() * logos.length)];
+    document.getElementById('splash-logo').src = pick;
+  </script>
+
+</body>
+</html>

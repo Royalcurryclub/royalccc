@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper site-header-wrapper">
-    <a class="site-title-link" href="{{ "/" | relative_url }}">
+    <a class="site-title-link" href="{{ "/home/" | relative_url }}">
       <img src="{{ '/assets/img/rccc-logo-burgundy.png' | relative_url }}"
            alt="The Royal Curry Club of Christchurch"
            class="site-logo"
@@ -23,12 +23,10 @@
     </label>
 
     <div class="trigger">
-      {%- for path in site.header_pages -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
-        {%- endif -%}
-      {%- endfor -%}
+      <a class="page-link" href="{{ "/home/" | relative_url }}">Welcome</a>
+      <a class="page-link" href="{{ "/visitations/" | relative_url }}">Visitations</a>
+      <a class="page-link" href="{{ "/scores-on-the-doors/" | relative_url }}">Scores on the Doors</a>
+      <a class="page-link" href="{{ "/reviews/" | relative_url }}">Reviews</a>
     </div>
   </nav>
 

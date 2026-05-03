@@ -43,9 +43,4 @@ defaults:
     values:
       layout: "page"
 
-# Header navigation links (for minima theme)
-header_pages:
-  - welcome.md
-  - visitations.md
-  - scores-on-the-doors.md
-  - reviews.md
+# Header navigation is hardcoded in _includes/header.html for full control
