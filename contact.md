@@ -12,9 +12,10 @@ Being exclusive, The Curry Club of Christchurch membership is mostly granted thr
 
 If you are a prospective member and lack a referral, please use the form below to contact our Maharaja, Rao of Christchurch GCIE KIH KBE. Make sure you include information about yourself to assist in our as of yet undefined, non-referral membership application process.
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contact" />
   <p style="display:none">
-    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    <label>Do not fill this out if you are human: <input name="bot-field" /></label>
   </p>
   <p>
     <label>Your Name (required)<br>
@@ -45,5 +46,3 @@ If you are a prospective member and lack a referral, please use the form below t
     <button type="submit" style="padding:10px 24px; background:#6B1E1E; color:#FAF4E6; border:none; cursor:pointer; font-family: -apple-system, system-ui, sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Send</button>
   </p>
 </form>
-
-
