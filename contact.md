@@ -46,4 +46,4 @@ If you are a prospective member and lack a referral, please use the form below t
   </p>
 </form>
 
-*Note: Netlify Forms is enabled by default on the free plan and includes spam filtering. Submissions appear in your Netlify dashboard under Forms.*
+
