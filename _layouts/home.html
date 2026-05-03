@@ -2,6 +2,68 @@
 layout: default
 ---
 
+{%- comment -%}
+  Read the latest sitting number directly from the Visitations table.
+  We parse the raw markdown of visitations.md, find the last row that's
+  not the header or separator, and grab the first cell.
+
+  This way the table is the single source of truth — when the editor adds
+  a row to the Visitations table, the homepage updates automatically.
+{%- endcomment -%}
+
+{%- assign visitations_page = site.pages | where: "path", "visitations.md" | first -%}
+{%- assign latest_sitting = "" -%}
+
+{%- if visitations_page -%}
+  {%- comment -%} Convert newlines to <br /> tags so we can split on them {%- endcomment -%}
+  {%- assign content_lines = visitations_page.content | newline_to_br | split: "<br />" -%}
+
+  {%- comment -%} Walk all lines, remember the last data row {%- endcomment -%}
+  {%- assign last_row = "" -%}
+  {%- for line in content_lines -%}
+    {%- assign trimmed = line | strip -%}
+    {%- if trimmed contains "|" -%}
+      {%- comment -%} Skip header rows (contain **) and separator rows (contain ---) {%- endcomment -%}
+      {%- unless trimmed contains "**" or trimmed contains "---" -%}
+        {%- assign last_row = trimmed -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%}
+    last_row looks like: "| 122 | Dec 2024 | Indian Fendalton | 250 Clyde Rd | Misceo Cafe & Bar |"
+    Split on "|" and take element [1] (first cell), then strip whitespace.
+  {%- endcomment -%}
+  {%- if last_row != "" -%}
+    {%- assign cells = last_row | split: "|" -%}
+    {%- assign latest_sitting = cells[1] | strip -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Fallback if parsing failed for any reason {%- endcomment -%}
+{%- if latest_sitting == "" -%}
+  {%- assign latest_sitting = site.posts.size -%}
+{%- endif -%}
+
+{%- comment -%}
+  Compute the ordinal suffix (st/nd/rd/th) for the sitting number.
+  Special case: 11/12/13 always take "th" regardless of last digit.
+{%- endcomment -%}
+{%- assign sitting_int = latest_sitting | plus: 0 -%}
+{%- assign last_two = sitting_int | modulo: 100 -%}
+{%- assign last_one = sitting_int | modulo: 10 -%}
+{%- if last_two == 11 or last_two == 12 or last_two == 13 -%}
+  {%- assign ordinal_suffix = "th" -%}
+{%- elsif last_one == 1 -%}
+  {%- assign ordinal_suffix = "st" -%}
+{%- elsif last_one == 2 -%}
+  {%- assign ordinal_suffix = "nd" -%}
+{%- elsif last_one == 3 -%}
+  {%- assign ordinal_suffix = "rd" -%}
+{%- else -%}
+  {%- assign ordinal_suffix = "th" -%}
+{%- endif -%}
+
 <div class="classic-home">
 
   {%- if content and content != "" -%}
@@ -12,12 +74,11 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
     {%- assign featured = site.posts.first -%}
-    {%- assign sitting_number = site.posts.size -%}
 
     <div class="featured-visitation">
       <div class="featured-label">— LATEST VISITATION —</div>
       <a href="{{ featured.url | relative_url }}" class="featured-title">{{ featured.title }}</a>
-      <div class="featured-meta">The {{ sitting_number }}th Sitting</div>
+      <div class="featured-meta">The {{ latest_sitting }}<sup>{{ ordinal_suffix }}</sup> Sitting</div>
     </div>
 
     {%- if site.posts.size > 1 -%}
@@ -31,7 +92,7 @@ layout: default
     {%- endif -%}
 
     <div class="view-all">
-      <a href="{{ "/reviews/" | relative_url }}">VIEW ALL {{ site.posts.size }} VISITATIONS &rarr;</a>
+      <a href="{{ "/visitations/" | relative_url }}">VIEW ALL {{ latest_sitting }} VISITATIONS &rarr;</a>
     </div>
   {%- endif -%}
 

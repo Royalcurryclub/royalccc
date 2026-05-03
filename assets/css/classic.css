@@ -221,6 +221,12 @@ a:hover {
   color: #4A2C1A;
 }
 
+.featured-meta sup {
+  font-size: 0.7em;
+  vertical-align: super;
+  margin-left: 1px;
+}
+
 .recent-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
