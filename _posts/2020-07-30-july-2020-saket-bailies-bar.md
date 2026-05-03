@@ -16,9 +16,9 @@ The starters were top notch, delicious spices and very tasty. The goat supreme (
 
 The Kilkenney from Baillies Bar went down well.
 
-<span style="font-family: 'Source Sans Pro',sans-serif; color: #47425d;">Scores on the Doors:  
+Scores on the Doors:  
 Service: 4.1/5  
 Food: 3.9/5  
-**<span style="font-family: 'Source Sans Pro',sans-serif;">Total: 8.0/10</span>**</span>
+**Total: 8.0/10**
 
-<span style="font-family: 'Source Sans Pro',sans-serif; color: #47425d;">Saket, 76 Edgeware Rd</span>
+Saket, 76 Edgeware Rd

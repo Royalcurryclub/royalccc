@@ -10,7 +10,7 @@ permalink: /november-2020-the-majestic-indian-bistro-the-brewery/
 
 Spot on food.
 
-<span data-sheets-formula-bar-text-style="font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;">The Majestic lived up to its name. It has to be said that the Banquet Bros were happy with the banquet offering – a sizzling meat platter starter, 3 mains of your choice and naan bread. Excellent Lamb Bhuna, flavour of lamb came through and complimented the spice. The service was great, but that could be because we were the only ones in the curry house. Nonetheless , it was good spot.</span>
+The Majestic lived up to its name. It has to be said that the Banquet Bros were happy with the banquet offering – a sizzling meat platter starter, 3 mains of your choice and naan bread. Excellent Lamb Bhuna, flavour of lamb came through and complimented the spice. The service was great, but that could be because we were the only ones in the curry house. Nonetheless , it was good spot.
 
 It would have been very easy to settle in for a session beforehand at the Tannery, especially with the good weather, cold beers and and great views.
 

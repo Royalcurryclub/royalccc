@@ -19,4 +19,4 @@ Service: 3.0/5
 Food: 4.1/5  
 **Total: 7.1/10**
 
-Touch the Taste of India, <span class="w8qArf"> 2A 2/4 Troup Drive, Tower Junction</span>
+Touch the Taste of India,  2A 2/4 Troup Drive, Tower Junction

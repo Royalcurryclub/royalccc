@@ -17,4 +17,4 @@ Service: 4.4/5
 Food: 3.3/5  
 **Total: 7.7/10**
 
-Permit Room, <span class="w8qArf"> </span><span class="LrzXr">779 Colombo St</span>
+Permit Room,  779 Colombo St

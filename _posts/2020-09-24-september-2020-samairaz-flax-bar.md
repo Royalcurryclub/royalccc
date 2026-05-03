@@ -10,8 +10,8 @@ permalink: /september-2020-samairaz-flax-bar/
 
 Super friendly staff.
 
-<span data-sheets-formula-bar-text-style="font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;">Great night out – t</span><span data-sheets-formula-bar-text-style="font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;">he food was pretty good and the owner was very attentive. Shame the pub next door closed early  
-</span>
+Great night out – the food was pretty good and the owner was very attentive. Shame the pub next door closed early  
+
 
 Scores on the Doors:  
 Service: 4.7/5  

@@ -23,6 +23,6 @@ A couple pints back at the Hornby Working Mans Club was turned down – no doubt
 Scores on the Doors:  
 Service: 4.3/5  
 Food: 4/5  
-**<span style="font-family: 'Calibri',sans-serif">Total: 8.3/10</span>**
+**Total: 8.3/10**
 
 Saffron Spice, 413 Main South Rd
