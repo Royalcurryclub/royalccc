@@ -1,0 +1,404 @@
+/* ============================================
+   Royal Curry Club — Classic Club theme
+   Loaded after minima's main.css to override
+   ============================================ */
+
+/* ---- Colours used throughout
+   Cream paper:    #FAF4E6
+   Pale band:      #F2E8D0
+   Gold rule:      #C9A961
+   Dark gold:      #8B6914
+   Burgundy:       #6B1E1E
+   Body text:      #2C1810
+   Muted body:     #4A2C1A
+*/
+
+body {
+  background: #FAF4E6;
+  color: #2C1810;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+/* Generic links throughout the site */
+a {
+  color: #6B1E1E;
+}
+
+a:hover {
+  color: #8B1E1E;
+  text-decoration: underline;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.site-header {
+  background: #FAF4E6;
+  border-top: none !important;
+  border-bottom: 1px solid #C9A961;
+  min-height: auto !important;
+  padding: 36px 0 0;
+}
+
+.site-header-wrapper {
+  text-align: center;
+  max-width: 800px;
+}
+
+.site-title-link {
+  display: inline-block;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.site-est {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #8B6914;
+  margin-bottom: 8px;
+}
+
+.site-title-classic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  color: #6B1E1E;
+  line-height: 1.2;
+}
+
+.site-title-sub {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #2C1810;
+  margin-top: 4px;
+}
+
+.site-divider {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #6B1E1E;
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+
+.site-nav {
+  background: #F2E8D0;
+  border-top: 1px solid #C9A961;
+  border-bottom: 1px solid #C9A961;
+  padding: 14px 0;
+  text-align: center;
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  text-align: center !important;
+}
+
+.site-nav .trigger {
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.site-nav .page-link {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: #2C1810 !important;
+  text-transform: uppercase;
+  margin: 0 16px !important;
+  padding: 4px 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.site-nav .page-link:hover {
+  color: #6B1E1E !important;
+  text-decoration: none;
+}
+
+/* Hide the mobile hamburger on desktop where we have room */
+@media screen and (min-width: 600px) {
+  .site-nav .menu-icon,
+  .site-nav label[for="nav-trigger"],
+  .site-nav input.nav-trigger {
+    display: none !important;
+  }
+}
+
+/* On small screens, restore the hamburger so the nav doesn't overflow */
+@media screen and (max-width: 599px) {
+  .site-nav {
+    padding: 8px 0;
+    text-align: right !important;
+  }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    padding: 6px 12px;
+  }
+  .site-nav .menu-icon path {
+    fill: #6B1E1E;
+  }
+  .site-nav .trigger {
+    display: none !important;
+  }
+  .site-nav input.nav-trigger:checked ~ .trigger {
+    display: block !important;
+    text-align: center !important;
+  }
+  .site-nav .page-link {
+    display: block;
+    padding: 6px 0;
+  }
+}
+
+/* ============================================
+   HOMEPAGE LAYOUT
+   ============================================ */
+
+.classic-home {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.classic-intro {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+  text-align: center;
+  color: #4A2C1A;
+  max-width: 560px;
+  margin: 36px auto 24px;
+}
+
+.classic-intro p {
+  margin: 0 0 12px;
+}
+
+.featured-visitation {
+  border-top: 1px solid #C9A961;
+  border-bottom: 1px solid #C9A961;
+  padding: 28px 0;
+  margin: 28px 0;
+  text-align: center;
+}
+
+.featured-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #8B6914;
+  margin-bottom: 14px;
+}
+
+.featured-title {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #6B1E1E;
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.featured-title:hover {
+  text-decoration: underline;
+}
+
+.featured-meta {
+  font-size: 14px;
+  color: #4A2C1A;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  font-size: 15px;
+  margin: 28px 0;
+}
+
+@media screen and (max-width: 599px) {
+  .recent-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recent-item {
+  border-bottom: 1px dotted #C9A961;
+  padding: 10px 0;
+  display: block;
+  text-decoration: none !important;
+  color: #2C1810 !important;
+  text-align: left;
+}
+
+.recent-item:hover {
+  color: #6B1E1E !important;
+}
+
+.recent-item:hover .recent-title {
+  color: #6B1E1E;
+}
+
+.recent-title {
+  color: #2C1810;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.view-all {
+  text-align: center;
+  margin: 32px 0 48px;
+}
+
+.view-all a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: #6B1E1E !important;
+  text-decoration: none;
+}
+
+.view-all a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   POSTS & PAGES (non-home)
+   ============================================ */
+
+.post-title,
+.page-heading,
+.post-list h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #6B1E1E;
+}
+
+.post-title {
+  font-style: italic;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.page-content h2,
+.page-content h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #6B1E1E;
+}
+
+.post-meta {
+  color: #8B6914;
+  font-style: italic;
+}
+
+.post-list-heading {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #6B1E1E !important;
+  font-style: italic;
+}
+
+.post-list > li {
+  border-bottom: 1px dotted #C9A961;
+  padding-bottom: 16px;
+}
+
+.post-link {
+  color: #2C1810 !important;
+}
+
+.post-link:hover {
+  color: #6B1E1E !important;
+}
+
+/* Tables (visitations, scores) */
+.post-content table,
+.page-content table {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #C9A961;
+}
+
+.post-content table th,
+.page-content table th {
+  background: #F2E8D0;
+  color: #2C1810;
+  border-bottom: 1px solid #C9A961;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.post-content table td,
+.page-content table td {
+  border-color: #E8DCC0;
+}
+
+.post-content table tr:nth-child(even),
+.page-content table tr:nth-child(even) {
+  background: rgba(242, 232, 208, 0.3);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  background: #FAF4E6 !important;
+  border-top: 1px solid #C9A961 !important;
+  color: #4A2C1A;
+  font-family: 'Playfair Display', Georgia, serif;
+  padding: 36px 0 !important;
+  margin-top: 48px;
+}
+
+.classic-footer {
+  text-align: center;
+  max-width: 600px;
+}
+
+.footer-divider {
+  font-size: 14px;
+  color: #6B1E1E;
+  margin-bottom: 16px;
+}
+
+.footer-tagline {
+  font-style: italic;
+  font-size: 14px;
+  color: #4A2C1A;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.footer-links {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #8B6914;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #6B1E1E;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

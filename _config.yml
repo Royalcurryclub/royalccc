@@ -45,8 +45,7 @@ defaults:
 
 # Header navigation links (for minima theme)
 header_pages:
-  - reviews.md
+  - welcome.md
   - visitations.md
   - scores-on-the-doors.md
-  - welcome.md
-  - contact.md
+  - reviews.md

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="classic-home">
+
+  {%- if content and content != "" -%}
+  <div class="classic-intro">
+    {{ content }}
+  </div>
+  {%- endif -%}
+
+  {%- if site.posts.size > 0 -%}
+    {%- assign featured = site.posts.first -%}
+    {%- assign sitting_number = site.posts.size -%}
+
+    <div class="featured-visitation">
+      <div class="featured-label">— LATEST VISITATION —</div>
+      <a href="{{ featured.url | relative_url }}" class="featured-title">{{ featured.title }}</a>
+      <div class="featured-meta">The {{ sitting_number }}th Sitting</div>
+    </div>
+
+    {%- if site.posts.size > 1 -%}
+    <div class="recent-grid">
+      {%- for post in site.posts limit: 4 offset: 1 -%}
+        <a href="{{ post.url | relative_url }}" class="recent-item">
+          <span class="recent-title">{{ post.title }}</span>
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    <div class="view-all">
+      <a href="{{ "/reviews/" | relative_url }}">VIEW ALL {{ site.posts.size }} VISITATIONS &rarr;</a>
+    </div>
+  {%- endif -%}
+
+</div>

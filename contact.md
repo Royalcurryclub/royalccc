@@ -42,7 +42,7 @@ If you are a prospective member and lack a referral, please use the form below t
     </label>
   </p>
   <p>
-    <button type="submit" style="padding:10px 20px; background:#2a7ae2; color:white; border:none; cursor:pointer;">Send</button>
+    <button type="submit" style="padding:10px 24px; background:#6B1E1E; color:#FAF4E6; border:none; cursor:pointer; font-family: -apple-system, system-ui, sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Send</button>
   </p>
 </form>
 
