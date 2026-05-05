@@ -737,3 +737,45 @@ a:hover {
 .page-content table td a:hover {
   border-bottom-color: #6B1E1E;
 }
+
+/* ============================================
+   HOME — split between latest visitation and recent reviews
+   ============================================ */
+
+/* When the latest visitation has no review yet, render the title in a softer tone */
+.featured-title-norevu {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #6B1E1E;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.featured-no-review {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #8B6914;
+  margin-left: 6px;
+}
+
+/* The "RECENT REVIEWS" section heading */
+.recent-reviews {
+  margin-top: 32px;
+}
+
+.recent-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #8B6914;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.view-all a + a {
+  margin-left: 0;
+}
