@@ -1,10 +1,10 @@
 ---
 id: 80
 title: Visitations
-date: '2018-12-14T09:05:17+13:00'
+date: 2018-12-14T09:05:17+13:00
 author: RCCC
 layout: table-page
-guid: 'http://royalccc.net/?page_id=80'
+guid: http://royalccc.net/?page_id=80
 ---
 | **\#** | **When** | **Curry Establishment** | **Where** | **Before/After Drinks** |
 |---|---|---|---|---|
@@ -124,11 +124,27 @@ guid: 'http://royalccc.net/?page_id=80'
 | 113 | Mar 2024 | MG Road Eatery | 467 Colombo St | Two Thumbs Brewery |
 | 114 | Apr 2024 | Coriander's Sumner | 11A Wakefield Ave | Trev's Man Cave |
 | 115 | May 2024 | Pepper Bridge | 300 Lincoln Rd | The Miller |
-| 115 | Jun 2024 | Coriander's Rolleston | 70 Rolleston Dr | Drafters Bar |
-| 116 | Jul 2024 | Saket | 76 Edgeware Rd | Bailies Bar |
-| 117 | Aug 2024 | Tudor's Restaurant and Bar | 88 Papanui Rd | The Bar @ Tudor's |
-| 118 | Sep 2024 | Gunpowder Indian Restaurant and Bar | 53 Victoria St | The Jolly Poacher |
-| 119 | Oct 2024 | Indian Zaika | 231 Papanui Rd | No.4 Bar |
-| 120 | Nov 2024 | Perfect Plate | 18 Marshland Rd | Fox & Ferret |
-| 121 | Nov 2024 Annual Outing | Saket Prebbleton | 563 Springs Rd | NZ vs England Test/Punky Brewster |
-| 122 | Dec 2024 | Indian Fendalton | 250 Clyde Rd | Misceo Cafe & Bar |
+| 116 | Jun 2024 | Coriander's Rolleston | 70 Rolleston Dr | Drafters Bar |
+| 117 | Jul 2024 | Saket | 76 Edgeware Rd | Bailies Bar |
+| 118 | Aug 2024 | Tudor's Restaurant and Bar | 88 Papanui Rd | The Bar @ Tudor's |
+| 119 | Sep 2024 | Gunpowder Indian Restaurant and Bar | 53 Victoria St | The Jolly Poacher |
+| 120 | Oct 2024 | Indian Zaika | 231 Papanui Rd | No.4 Bar |
+| 121 | Nov 2024 | Perfect Plate | 18 Marshland Rd | Fox & Ferret |
+| 122 | Nov 2024 Annual Outing | Saket Prebbleton | 563 Springs Rd | NZ vs England Test/Punky Brewster |
+| 123 | Dec 2024 | Indian Fendalton | 250 Clyde Rd | Misceo Cafe & Bar |
+| 124 | Jan 2025 | Arjee Bhajee | 13 Riccarton Rd | Volstead |
+| 125 | Feb 2025 | Gorkhali Chulo | 4/7 Halswell Rd | Bills Bar and Bistro |
+| 126 | Mar 2025 | MG Road Eatery | 467 Colombo St | Two Thumbs Brewery |
+| 127 | Apr 2025 | Indian Springs Eatery | 4 Troup Dr | Speights Ale House |
+| 128 | May 2025 | Saket Opawa | 132a Opawa Rd | Cassels |
+| 129 | Jun 2025 | Welcome India | 7/101 Main North Rd | Rose & Thistle |
+| 130 | Jul 2025 | Saket Indian Restaurant | 76 Edgeware Rd | Bailies Bar |
+| 131 | Aug 2025 | Indian Moments | 114 Marshland Rd | Stock Exchange |
+| 132 | Sep 2025 | Ceylon Kitchen | 91 Riccarton Rd | Volstead |
+| 133 | Oct 2025 | Maharajah Indian Restaurant | 1 Restell St | Rose & Thistle |
+| 134 | Nov 2025 | Flavors Kebab & Biriyani | 65 The Runway | The Good Home |
+| 135 | Dec 2025 | Two Fat Indians | 4/88 Cashel St | The Craft Embassy |
+| 136 | Jan 2026 | Coriander's | 222 St Asaph St | Dux Central |
+| 137 | Feb 2026 | Arjee Bhajee | 13 Riccarton Rd | Volstead |
+| 138 | Mar 2026 | Indian Restaurant & Kava Lounge | 17/113 Worcester St | The Church Pub |
+| 139 | Apr 2026 | South of India | 217 Marine Parade | Southpaw Brewing Company |
