@@ -779,3 +779,30 @@ a:hover {
 .view-all a + a {
   margin-left: 0;
 }
+
+/* ============================================
+   REVIEWS PAGE SEARCH
+   ============================================ */
+
+.reviews-search-wrapper {
+  margin: 16px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* The reviews-search-wrapper reuses .table-search-input from the table search */
+
+.reviews-no-matches {
+  margin: 32px 0;
+  padding: 24px;
+  text-align: center;
+  background: rgba(242, 232, 208, 0.4);
+  border: 1px dashed #C9A961;
+  border-radius: 2px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #8B6914;
+  font-size: 15px;
+}
