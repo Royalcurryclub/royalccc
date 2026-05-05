@@ -3,41 +3,20 @@ layout: default
 ---
 
 {%- comment -%}
-  Parse the latest VISITATION from the Visitations table.
-  The table has columns: # | When | Curry Establishment | Where | Before/After Drinks.
-  We construct a display title from the row, e.g.:
-    "April 2026 – South of India & Southpaw Brewing Company"
+  Read the LATEST VISITATION from _data/visitations.yml.
+  Each entry has: sitting, when, curry, where, drinks.
 
-  This is independent of blog posts. The Visitations table is the source of truth
+  This is independent of blog posts. The Visitations data is the source of truth
   for "what just happened". Reviews (posts) are when those visits get written up.
 {%- endcomment -%}
 
-{%- assign visitations_page = site.pages | where: "path", "visitations.md" | first -%}
-{%- assign latest_sitting = "" -%}
-{%- assign latest_when = "" -%}
-{%- assign latest_curry = "" -%}
-{%- assign latest_drinks = "" -%}
-
-{%- if visitations_page -%}
-  {%- assign content_lines = visitations_page.content | newline_to_br | split: "<br />" -%}
-  {%- assign last_row = "" -%}
-  {%- for line in content_lines -%}
-    {%- assign trimmed = line | strip -%}
-    {%- if trimmed contains "|" -%}
-      {%- unless trimmed contains "**" or trimmed contains "---" -%}
-        {%- assign last_row = trimmed -%}
-      {%- endunless -%}
-    {%- endif -%}
-  {%- endfor -%}
-
-  {%- if last_row != "" -%}
-    {%- assign cells = last_row | split: "|" -%}
-    {%- assign latest_sitting = cells[1] | strip -%}
-    {%- assign latest_when    = cells[2] | strip -%}
-    {%- assign latest_curry   = cells[3] | strip -%}
-    {%- assign latest_drinks  = cells[5] | strip -%}
-  {%- endif -%}
-{%- endif -%}
+{%- assign visitations = site.data.visitations -%}
+{%- assign latest = visitations | last -%}
+{%- assign latest_sitting = latest.sitting | default: "" -%}
+{%- assign latest_when    = latest.when    | default: "" -%}
+{%- assign latest_curry   = latest.curry   | default: "" -%}
+{%- assign latest_drinks  = latest.drinks  | default: "" -%}
+{%- assign visit_count    = visitations | size -%}
 
 {%- comment -%} Compute ordinal suffix for the sitting number {%- endcomment -%}
 {%- assign sitting_int = latest_sitting | plus: 0 -%}
@@ -57,7 +36,7 @@ layout: default
 
 {%- comment -%}
   Try to find a post matching the latest visitation's month/year.
-  We look for a post whose title contains the same month name and year as the row's "When".
+  Look for a post whose title contains the same month name and year as the row's "When".
 {%- endcomment -%}
 {%- assign latest_visit_post_url = "" -%}
 {%- assign when_lower = latest_when | downcase -%}
@@ -70,7 +49,6 @@ layout: default
 {%- for ms in months_short -%}
   {%- if when_lower contains ms -%}
     {%- assign visit_month = month_names[forloop.index0] -%}
-    {%- comment -%} Find the year (4 digits) in the When string {%- endcomment -%}
     {%- assign year_match = when_lower | split: ms | last | strip -%}
     {%- assign visit_year = year_match | slice: 0, 4 -%}
     {%- break -%}

@@ -17,6 +17,27 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+
+    {%- comment -%}
+      If the new structured score fields are set in the front matter, render them
+      automatically at the bottom of the post in the standard format.
+      This is for posts written via the new CMS (post-2026 onwards).
+      Older posts have these scores typed into the body and won't have these fields.
+    {%- endcomment -%}
+    {%- if page.service or page.curry -%}
+    <div class="post-scores">
+      {%- if page.service -%}<p>Service: {{ page.service }}/5</p>{%- endif -%}
+      {%- if page.curry -%}<p>Curry: {{ page.curry }}/5</p>{%- endif -%}
+      {%- if page.service and page.curry -%}
+        {%- assign total = page.service | plus: page.curry -%}
+        <p><strong>Total: {{ total }}/10</strong></p>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    {%- if page.address -%}
+    <p class="post-address">{{ page.address }}</p>
+    {%- endif -%}
   </div>
 
   {%- comment -%}

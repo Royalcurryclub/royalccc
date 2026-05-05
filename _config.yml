@@ -22,6 +22,7 @@ permalink: /:title/
 exclude:
   - README.md
   - SETUP_GUIDE.md
+  - EDITORS_GUIDE.md
   - Gemfile
   - Gemfile.lock
   - node_modules
