@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal CCC Admin</title>
+</head>
+<body>
+  <!-- Decap CMS (formerly Netlify CMS) -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    var h = window.h;
+    var createClass = window.createClass;
+
+    // Custom preview styles to roughly match the live site
+    CMS.registerPreviewStyle("data:text/css;charset=utf-8," + encodeURIComponent(`
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+      body {
+        background: #FAF4E6;
+        color: #2C1810;
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        padding: 32px 40px;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+      h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        color: #6B1E1E;
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 0 0 8px 0;
+      }
+      h2, h3, h4 {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: #6B1E1E;
+      }
+      .post-meta {
+        color: #8B6914;
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      .post-scores {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #C9A961;
+      }
+      .post-scores p {
+        margin: 4px 0;
+      }
+      .post-address {
+        margin-top: 16px;
+        font-style: italic;
+        color: #4A2C1A;
+      }
+      a { color: #6B1E1E; }
+      strong { color: #2C1810; }
+      hr { border: none; border-top: 1px solid #C9A961; margin: 24px 0; }
+      blockquote {
+        border-left: 3px solid #C9A961;
+        margin-left: 0;
+        padding-left: 16px;
+        color: #4A2C1A;
+        font-style: italic;
+      }
+    `));
+
+    // Preview template for blog posts - shows the body PLUS the structured score fields
+    var BlogPostPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || 'Untitled';
+        var date = entry.getIn(['data', 'date']);
+        var service = entry.getIn(['data', 'service']);
+        var curry = entry.getIn(['data', 'curry']);
+        var address = entry.getIn(['data', 'address']);
+
+        var dateStr = '';
+        if (date) {
+          try {
+            var d = new Date(date);
+            dateStr = d.toLocaleDateString('en-NZ', { year: 'numeric', month: 'short', day: 'numeric' });
+          } catch (e) { dateStr = String(date); }
+        }
+
+        // Build the score block if any scores given
+        var scoreEls = [];
+        if (service) scoreEls.push(h('p', {}, 'Service: ' + service + '/5'));
+        if (curry) scoreEls.push(h('p', {}, 'Curry: ' + curry + '/5'));
+        if (service && curry) {
+          var total = (parseFloat(service) + parseFloat(curry)).toFixed(1);
+          scoreEls.push(h('p', {}, h('strong', {}, 'Total: ' + total + '/10')));
+        }
+
+        var children = [
+          h('h1', {}, title),
+          h('p', { className: 'post-meta' }, dateStr + ' • RoyalCCC Reviewer'),
+          h('div', {}, this.props.widgetFor('body')),
+        ];
+        if (scoreEls.length > 0) {
+          children.push(h('div', { className: 'post-scores' }, scoreEls));
+        }
+        if (address) {
+          children.push(h('p', { className: 'post-address' }, address));
+        }
+
+        return h('article', {}, children);
+      }
+    });
+    CMS.registerPreviewTemplate('posts', BlogPostPreview);
+
+    // Preview for the visitations data file - render as a table
+    var VisitationsPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var rows = entry.getIn(['data', 'visitations']);
+        if (!rows) return h('p', {}, 'No visitations yet.');
+        var arr = rows.toJS ? rows.toJS() : rows;
+
+        // Show last 10 in newest-first order so the editor sees their newest changes
+        var recent = arr.slice(-10).reverse();
+
+        var trs = recent.map(function (v, i) {
+          return h('tr', { key: i },
+            h('td', {}, v.sitting || ''),
+            h('td', {}, v.when || ''),
+            h('td', {}, v.curry || ''),
+            h('td', {}, v.where || ''),
+            h('td', {}, v.drinks || '')
+          );
+        });
+
+        return h('article', {},
+          h('h1', {}, 'Visitations (10 most recent)'),
+          h('p', { style: { fontSize: '14px', color: '#8B6914' } },
+            arr.length + ' total entries · scroll the editor list below to find older ones'),
+          h('table', { style: { width: '100%', borderCollapse: 'collapse' } },
+            h('thead', {},
+              h('tr', {},
+                h('th', {}, '#'),
+                h('th', {}, 'When'),
+                h('th', {}, 'Curry'),
+                h('th', {}, 'Where'),
+                h('th', {}, 'Drinks')
+              )
+            ),
+            h('tbody', {}, trs)
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('visitations', VisitationsPreview);
+
+    // Preview for scores data
+    var ScoresPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var rows = entry.getIn(['data', 'scores']);
+        if (!rows) return h('p', {}, 'No scores yet.');
+        var arr = rows.toJS ? rows.toJS() : rows;
+        var recent = arr.slice(0, 10);
+
+        var trs = recent.map(function (s, i) {
+          return h('tr', { key: i },
+            h('td', {}, s.when || ''),
+            h('td', {}, s.visitation || ''),
+            h('td', {}, s.service || ''),
+            h('td', {}, s.food || ''),
+            h('td', {}, s.total || '')
+          );
+        });
+
+        return h('article', {},
+          h('h1', {}, 'Scores on the Doors (10 most recent)'),
+          h('p', { style: { fontSize: '14px', color: '#8B6914' } },
+            arr.length + ' total entries'),
+          h('table', { style: { width: '100%', borderCollapse: 'collapse' } },
+            h('thead', {},
+              h('tr', {},
+                h('th', {}, 'When'),
+                h('th', {}, 'Visitation'),
+                h('th', {}, 'Service'),
+                h('th', {}, 'Food'),
+                h('th', {}, 'Total')
+              )
+            ),
+            h('tbody', {}, trs)
+          )
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('scores', ScoresPreview);
+
+    // Generic preview for static pages
+    var PagePreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var title = entry.getIn(['data', 'title']) || '';
+        return h('article', {},
+          h('h1', {}, title),
+          h('div', {}, this.props.widgetFor('body'))
+        );
+      }
+    });
+    CMS.registerPreviewTemplate('home', PagePreview);
+    CMS.registerPreviewTemplate('contact', PagePreview);
+  </script>
+</body>
+</html>
