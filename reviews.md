@@ -13,13 +13,6 @@ permalink: /reviews/
   rather than the post's publish date. This is necessary because some reviews are
   written up months after the visitation (e.g. a March visit posted in June), so
   post.date doesn't reflect the chronological order of visits.
-
-  Title format: "March 2024 – ...", "November 2024 Annual Outing – ..."
-
-  Strategy:
-  1. For each post, extract a sortable key from the title: "YYYYMM" plus a tiebreaker.
-  2. Sort all posts globally by that key, descending (newest visit first).
-  3. Group them by year (also extracted from title).
 {%- endcomment -%}
 
 {%- assign month_names = "january,february,march,april,may,june,july,august,september,october,november,december" | split: "," -%}
@@ -75,15 +68,154 @@ permalink: /reviews/
 {%- endfor -%}
 <p>All RCCC visitations and reviews, grouped by year. Most recent first.</p>
 
-<div class="reviews-jumpnav">
-Jump to:
-{% for yr in years_seen %}<a href="#{{ yr }}">{{ yr }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+<div class="reviews-search-wrapper">
+  <input
+    type="search"
+    class="table-search-input"
+    id="reviews-search"
+    placeholder="Search reviews — restaurant, bar, dish, anything…"
+    aria-label="Search reviews"
+    autocomplete="off">
+  <span class="table-search-count" id="reviews-search-count" aria-live="polite"></span>
 </div>
 
-{% for yr in years_seen %}<section class="reviews-year">
+<div class="reviews-jumpnav" id="reviews-jumpnav">
+Jump to:
+{% for yr in years_seen %}<a href="#{{ yr }}" data-year="{{ yr }}">{{ yr }}</a>{% unless forloop.last %} <span class="jumpnav-sep"> · </span>{% endunless %}{% endfor %}
+</div>
+
+{% for yr in years_seen %}<section class="reviews-year" data-year="{{ yr }}">
 <h2 id="{{ yr }}" class="reviews-year-heading">{{ yr }}</h2>
 <ul class="reviews-list">
-{% for entry in sorted %}{% assign parts = entry | split: "|" %}{% if parts[1] == yr %}<li><a href="{{ parts[2] }}">{{ parts[3] | replace: "&#124;", "|" }}</a></li>
+{% for entry in sorted %}{% assign parts = entry | split: "|" %}{% if parts[1] == yr %}<li data-post-url="{{ parts[2] }}"><a href="{{ parts[2] }}">{{ parts[3] | replace: "&#124;", "|" }}</a></li>
 {% endif %}{% endfor %}</ul>
 </section>
 {% endfor %}
+
+<div class="reviews-no-matches" id="reviews-no-matches" hidden>
+  No reviews match that search.
+</div>
+
+{%- comment -%}
+  Inline search index: each post's title + body text, used for full-text matching.
+  Stripped of HTML tags and lowercased. ~88 posts × ~1500 chars = ~130KB.
+  This loads on /reviews/ only, not on every page.
+{%- endcomment -%}
+<script id="rccc-reviews-index" type="application/json">
+{
+  "posts": [
+    {%- for post in site.posts -%}
+    {
+      "url": {{ post.url | jsonify }},
+      "text": {{ post.title | append: " " | append: post.content | strip_html | downcase | replace: "\n", " " | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var input    = document.getElementById('reviews-search');
+  var counter  = document.getElementById('reviews-search-count');
+  var jumpnav  = document.getElementById('reviews-jumpnav');
+  var noMatch  = document.getElementById('reviews-no-matches');
+  if (!input) return;
+
+  // Build a map of url => searchable text from the inline index
+  var textByUrl = {};
+  try {
+    var data = JSON.parse(document.getElementById('rccc-reviews-index').textContent);
+    data.posts.forEach(function (p) { textByUrl[p.url] = p.text; });
+  } catch (e) {}
+
+  var allItems    = Array.prototype.slice.call(document.querySelectorAll('.reviews-list li'));
+  var allSections = Array.prototype.slice.call(document.querySelectorAll('.reviews-year'));
+  var allJumpLinks = Array.prototype.slice.call(jumpnav.querySelectorAll('a'));
+  var jumpSeps     = Array.prototype.slice.call(jumpnav.querySelectorAll('.jumpnav-sep'));
+  var totalItems = allItems.length;
+
+  function updateCount(matched) {
+    if (input.value.trim() === '') {
+      counter.textContent = '';
+      return;
+    }
+    if (matched === 0)      counter.textContent = 'No matches';
+    else if (matched === 1) counter.textContent = '1 match';
+    else                    counter.textContent = matched + ' matches of ' + totalItems;
+  }
+
+  function applyFilter() {
+    var q = input.value.trim().toLowerCase();
+
+    if (q === '') {
+      // Reset everything
+      allItems.forEach(function (li)   { li.style.display = ''; });
+      allSections.forEach(function (s) { s.style.display = ''; });
+      allJumpLinks.forEach(function (a){ a.style.display = ''; });
+      jumpSeps.forEach(function (s)    { s.style.display = ''; });
+      noMatch.hidden = true;
+      updateCount(totalItems);
+      return;
+    }
+
+    var terms = q.split(/\s+/);
+    var matched = 0;
+    var yearsWithMatch = {};
+
+    allItems.forEach(function (li) {
+      var url = li.getAttribute('data-post-url');
+      var corpus = (textByUrl[url] || '') + ' ' + li.textContent.toLowerCase();
+      var allMatch = terms.every(function (t) { return corpus.indexOf(t) !== -1; });
+      if (allMatch) {
+        li.style.display = '';
+        matched++;
+        // Track which year section this belongs to
+        var section = li.closest('.reviews-year');
+        if (section) yearsWithMatch[section.getAttribute('data-year')] = true;
+      } else {
+        li.style.display = 'none';
+      }
+    });
+
+    // Hide year sections with no visible items
+    allSections.forEach(function (s) {
+      var yr = s.getAttribute('data-year');
+      s.style.display = yearsWithMatch[yr] ? '' : 'none';
+    });
+
+    // Hide jumpnav years that have no matches (and their separators)
+    allJumpLinks.forEach(function (a, i) {
+      var yr = a.getAttribute('data-year');
+      a.style.display = yearsWithMatch[yr] ? '' : 'none';
+    });
+    // Hide separators when neighbouring link is hidden
+    jumpSeps.forEach(function (sep, i) {
+      // sep[i] sits between link[i] and link[i+1]
+      var leftVisible  = allJumpLinks[i]   && allJumpLinks[i].style.display   !== 'none';
+      var rightVisible = allJumpLinks[i+1] && allJumpLinks[i+1].style.display !== 'none';
+      sep.style.display = (leftVisible && rightVisible) ? '' : 'none';
+    });
+
+    noMatch.hidden = matched > 0;
+    updateCount(matched);
+  }
+
+  input.addEventListener('input', applyFilter);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      input.value = '';
+      applyFilter();
+      input.blur();
+    }
+  });
+
+  // Allow ?q=foo for shareable filtered URLs
+  var params = new URLSearchParams(window.location.search);
+  var initial = params.get('q');
+  if (initial) {
+    input.value = initial;
+    applyFilter();
+  }
+})();
+</script>
