@@ -1,8 +1,9 @@
 # Site settings
 title: "The Royal Curry Club of Christchurch"
 description: "Led by our inspirational Maharaja, we are an exclusive group of reputable gentlemen who meet monthly to savour curry and beer."
-url: "https://royalccc.netlify.app"  # Change this to your actual Netlify URL after deployment
+url: "https://royalccc.net"
 baseurl: ""
+lang: en_NZ
 
 # SEO / social sharing
 logo: /assets/img/favicon-512.png
