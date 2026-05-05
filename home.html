@@ -1,0 +1,142 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  Parse the latest VISITATION from the Visitations table.
+  The table has columns: # | When | Curry Establishment | Where | Before/After Drinks.
+  We construct a display title from the row, e.g.:
+    "April 2026 – South of India & Southpaw Brewing Company"
+
+  This is independent of blog posts. The Visitations table is the source of truth
+  for "what just happened". Reviews (posts) are when those visits get written up.
+{%- endcomment -%}
+
+{%- assign visitations_page = site.pages | where: "path", "visitations.md" | first -%}
+{%- assign latest_sitting = "" -%}
+{%- assign latest_when = "" -%}
+{%- assign latest_curry = "" -%}
+{%- assign latest_drinks = "" -%}
+
+{%- if visitations_page -%}
+  {%- assign content_lines = visitations_page.content | newline_to_br | split: "<br />" -%}
+  {%- assign last_row = "" -%}
+  {%- for line in content_lines -%}
+    {%- assign trimmed = line | strip -%}
+    {%- if trimmed contains "|" -%}
+      {%- unless trimmed contains "**" or trimmed contains "---" -%}
+        {%- assign last_row = trimmed -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if last_row != "" -%}
+    {%- assign cells = last_row | split: "|" -%}
+    {%- assign latest_sitting = cells[1] | strip -%}
+    {%- assign latest_when    = cells[2] | strip -%}
+    {%- assign latest_curry   = cells[3] | strip -%}
+    {%- assign latest_drinks  = cells[5] | strip -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Compute ordinal suffix for the sitting number {%- endcomment -%}
+{%- assign sitting_int = latest_sitting | plus: 0 -%}
+{%- assign last_two = sitting_int | modulo: 100 -%}
+{%- assign last_one = sitting_int | modulo: 10 -%}
+{%- if last_two == 11 or last_two == 12 or last_two == 13 -%}
+  {%- assign ordinal_suffix = "th" -%}
+{%- elsif last_one == 1 -%}
+  {%- assign ordinal_suffix = "st" -%}
+{%- elsif last_one == 2 -%}
+  {%- assign ordinal_suffix = "nd" -%}
+{%- elsif last_one == 3 -%}
+  {%- assign ordinal_suffix = "rd" -%}
+{%- else -%}
+  {%- assign ordinal_suffix = "th" -%}
+{%- endif -%}
+
+{%- comment -%}
+  Try to find a post matching the latest visitation's month/year.
+  We look for a post whose title contains the same month name and year as the row's "When".
+{%- endcomment -%}
+{%- assign latest_visit_post_url = "" -%}
+{%- assign when_lower = latest_when | downcase -%}
+
+{%- assign month_names = "january,february,march,april,may,june,july,august,september,october,november,december" | split: "," -%}
+{%- assign months_short = "jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec" | split: "," -%}
+
+{%- assign visit_month = "" -%}
+{%- assign visit_year = "" -%}
+{%- for ms in months_short -%}
+  {%- if when_lower contains ms -%}
+    {%- assign visit_month = month_names[forloop.index0] -%}
+    {%- comment -%} Find the year (4 digits) in the When string {%- endcomment -%}
+    {%- assign year_match = when_lower | split: ms | last | strip -%}
+    {%- assign visit_year = year_match | slice: 0, 4 -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if visit_month != "" and visit_year != "" -%}
+  {%- assign needle = visit_month | append: " " | append: visit_year -%}
+  {%- assign want_annual = false -%}
+  {%- if when_lower contains "annual outing" -%}
+    {%- assign want_annual = true -%}
+  {%- endif -%}
+  {%- for post in site.posts -%}
+    {%- assign title_lower = post.title | downcase -%}
+    {%- if title_lower contains needle -%}
+      {%- assign post_is_annual = false -%}
+      {%- if title_lower contains "annual outing" -%}
+        {%- assign post_is_annual = true -%}
+      {%- endif -%}
+      {%- if want_annual == post_is_annual -%}
+        {%- assign latest_visit_post_url = post.url -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+<div class="classic-home">
+
+  {%- if content and content != "" -%}
+  <div class="classic-intro">
+    {{ content }}
+  </div>
+  {%- endif -%}
+
+  {%- comment -%} ============= LATEST VISITATION ============= {%- endcomment -%}
+  {%- if latest_curry != "" -%}
+  <div class="featured-visitation">
+    <div class="featured-label">— LATEST VISITATION —</div>
+    {%- if latest_visit_post_url != "" -%}
+      <a href="{{ latest_visit_post_url | relative_url }}" class="featured-title">{{ latest_when }} – {{ latest_curry }}{% if latest_drinks != "" %} & {{ latest_drinks }}{% endif %}</a>
+    {%- else -%}
+      <div class="featured-title featured-title-norevu">{{ latest_when }} – {{ latest_curry }}{% if latest_drinks != "" %} & {{ latest_drinks }}{% endif %}</div>
+    {%- endif -%}
+    <div class="featured-meta">The {{ latest_sitting }}<sup>{{ ordinal_suffix }}</sup> Sitting{% if latest_visit_post_url == "" %} <span class="featured-no-review">· review pending</span>{% endif %}</div>
+  </div>
+  {%- endif -%}
+
+  {%- comment -%} ============= RECENT REVIEWS ============= {%- endcomment -%}
+  {%- if site.posts.size > 0 -%}
+  <div class="recent-reviews">
+    <div class="recent-label">— RECENT REVIEWS —</div>
+    <div class="recent-grid">
+      {%- for post in site.posts limit: 4 -%}
+        <a href="{{ post.url | relative_url }}" class="recent-item">
+          <span class="recent-title">{{ post.title }}</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="view-all">
+    <a href="{{ "/reviews/" | relative_url }}">SEE ALL REVIEWS &rarr;</a>
+    &nbsp;·&nbsp;
+    <a href="{{ "/visitations/" | relative_url }}">SEE ALL {{ latest_sitting }} VISITATIONS &rarr;</a>
+  </div>
+  {%- endif -%}
+
+</div>
