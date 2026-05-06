@@ -461,13 +461,13 @@ scores:
   service: '4.0'
   food: '4.3'
   total: '8.3'
-- when: Nov 2018 Annual Outing
+- when: Nov-18 Annual Outing
   visitation: Plaza Indian Restaurant & Tandoor & Cafe Cortado
   review_url: ''
   service: '3.5'
   food: '3.0'
   total: '6.5'
-- when: Nov 2018 Annual Outing
+- when: Nov-18 Annual Outing
   visitation: Kaikoura Indian Restaurant
   review_url: ''
   service: '3.0'

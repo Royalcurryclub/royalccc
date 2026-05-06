@@ -70,6 +70,45 @@ layout: default
       {%- endif -%}
       {%- if want_annual == post_is_annual -%}
         {%- assign latest_visit_post_url = post.url -%}
+        {%- assign latest_visit_post = post -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- comment -%}
+  Look up the score for the latest visit from _data/scores.yml.
+  This is more reliable than parsing prose body, and works for both new
+  (structured-fields) and old (scores-in-body) posts.
+  Match by month/year of the visitation rather than the row's "When" label,
+  because Scores uses "Dec-24" while Visitations uses "Dec 2024".
+{%- endcomment -%}
+{%- assign latest_score = "" -%}
+{%- if visit_month != "" and visit_year != "" -%}
+  {%- assign month_short_idx = 0 -%}
+  {%- for mn in month_names -%}
+    {%- if mn == visit_month -%}
+      {%- assign month_short_idx = forloop.index0 -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign visit_month_short = months_short[month_short_idx] | capitalize -%}
+  {%- assign visit_year_short = visit_year | slice: 2, 2 -%}
+  {%- assign score_when_target = visit_month_short | append: "-" | append: visit_year_short -%}
+
+  {%- for s in site.data.scores.scores -%}
+    {%- assign s_when_lower = s.when | downcase -%}
+    {%- assign target_lower = score_when_target | downcase -%}
+    {%- if s_when_lower contains target_lower -%}
+      {%- assign s_is_annual = false -%}
+      {%- if s_when_lower contains "annual outing" -%}
+        {%- assign s_is_annual = true -%}
+      {%- endif -%}
+      {%- if want_annual == s_is_annual -%}
+        {%- assign latest_score = s.total -%}
+        {%- assign latest_score_service = s.service -%}
+        {%- assign latest_score_food = s.food -%}
         {%- break -%}
       {%- endif -%}
     {%- endif -%}
@@ -92,6 +131,14 @@ layout: default
       <a href="{{ latest_visit_post_url | relative_url }}" class="featured-title">{{ latest_when }} – {{ latest_curry }}{% if latest_drinks != "" %} & {{ latest_drinks }}{% endif %}</a>
     {%- else -%}
       <div class="featured-title featured-title-norevu">{{ latest_when }} – {{ latest_curry }}{% if latest_drinks != "" %} & {{ latest_drinks }}{% endif %}</div>
+    {%- endif -%}
+    {%- if latest_score != "" -%}
+    <div class="featured-score">
+      <span class="featured-score-total">{{ latest_score }}<span class="featured-score-denom">/10</span></span>
+      {%- if latest_score_service and latest_score_food -%}
+      <span class="featured-score-breakdown">Service {{ latest_score_service }} · Food {{ latest_score_food }}</span>
+      {%- endif -%}
+    </div>
     {%- endif -%}
     <div class="featured-meta">The {{ latest_sitting }}<sup>{{ ordinal_suffix }}</sup> Sitting{% if latest_visit_post_url == "" %} <span class="featured-no-review">· review pending</span>{% endif %}</div>
   </div>

@@ -156,6 +156,18 @@ layout: default
     }
   });
 
+  // ---- Inject data-label attributes onto every cell so the mobile card layout
+  // can prefix each value with its column name. Also mark the "headline" cell
+  // (the column we'd link from) so it can be styled bigger and label-less. ----
+  var headerLabels = headers.map(function (h) { return (h.textContent || '').trim(); });
+  rows.forEach(function (row) {
+    var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+    cells.forEach(function (c, i) {
+      if (headerLabels[i]) c.setAttribute('data-label', headerLabels[i]);
+      if (i === targetColIndex) c.classList.add('cell-headline');
+    });
+  });
+
   rows.forEach(function (row) {
     if (row.querySelector('a')) return; // Already has a link, leave it
 
