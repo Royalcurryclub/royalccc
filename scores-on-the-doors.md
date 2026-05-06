@@ -16,7 +16,7 @@ permalink: /scores-on-the-doors/
     </tr>
   </thead>
   <tbody>
-    {%- for s in site.data.scores -%}
+    {%- for s in site.data.scores.scores -%}
     <tr>
       <td>{{ s.when }}</td>
       <td>

@@ -4,14 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal CCC Admin</title>
+  <!-- Netlify Identity widget — required by Decap CMS for login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- Decap CMS (formerly Netlify CMS) -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
   <script>
-    var h = window.h;
-    var createClass = window.createClass;
+    // createClass and h are globals exposed by Decap CMS — use directly without redeclaring
 
     // Custom preview styles to roughly match the live site
     CMS.registerPreviewStyle("data:text/css;charset=utf-8," + encodeURIComponent(`

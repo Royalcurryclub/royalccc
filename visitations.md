@@ -15,7 +15,7 @@ permalink: /visitations/
     </tr>
   </thead>
   <tbody>
-    {%- for v in site.data.visitations -%}
+    {%- for v in site.data.visitations.visitations -%}
     <tr>
       <td>{{ v.sitting }}</td>
       <td>{{ v.when }}</td>

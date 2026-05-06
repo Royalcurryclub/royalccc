@@ -10,7 +10,7 @@ layout: default
   for "what just happened". Reviews (posts) are when those visits get written up.
 {%- endcomment -%}
 
-{%- assign visitations = site.data.visitations -%}
+{%- assign visitations = site.data.visitations.visitations -%}
 {%- assign latest = visitations | last -%}
 {%- assign latest_sitting = latest.sitting | default: "" -%}
 {%- assign latest_when    = latest.when    | default: "" -%}
