@@ -1,4 +1,15 @@
 scores:
+  - when: Nov-25
+    visitation: Flavors Kebab and Biryani & The Good Home Wigram
+    service: "3.3"
+    food: "3.2"
+    total: "6.5"
+  - when: Sep-25
+    review_url: ""
+    service: "4.8"
+    food: "4.7"
+    total: "8.5"
+    visitation: Ceylon Kitchen & Volstead
   - when: Aug-25
     visitation: Indian Moments & StockXChange Bar & Grill
     service: "3.6"
@@ -579,14 +590,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Sep-25
-    review_url: ""
-    service: "4.8"
-    food: "4.7"
-    total: "8.5"
-    visitation: Ceylon Kitchen & Volstead
-  - when: Nov-25
-    visitation: Flavors Kebab and Biryani & The Good Home Wigram
-    service: "3.3"
-    food: "3.2"
-    total: "6.5"
+  - when: Nov-25 Annual Outing
+    visitation: Nawab Eatery & The Dubliner & The Brown Pub & The Blue Pub
+    service: "4.7"
+    food: "4.3"
+    total: "9.0"
