@@ -600,3 +600,8 @@ scores:
     service: "4.3"
     food: "3.0"
     total: "7.3"
+  - when: Jan-26
+    visitation: Corianders & Dux Central
+    service: "4.3"
+    food: "4.4"
+    total: "7.7"
