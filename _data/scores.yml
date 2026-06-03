@@ -1,9 +1,10 @@
 scores:
-  - when: May-25
+  - when: May-26
     visitation: Bombay Brassiere & Sideline Sports Bar
     food: "3.8"
     service: "2.3"
     total: "6.1"
+    review_url: "/may-2026-bombay-brassiere-sideline-sports-bar/ "
   - when: Apr-26
     visitation: Indian Moments & StockXChange Bar & Grill
     service: "3.8"
