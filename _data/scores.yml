@@ -564,3 +564,8 @@ scores:
     service: "4.3"
     food: "4.6"
     total: "8.9"
+  - when: Jun-25
+    visitation: Welcome India & Rose and Thistle
+    service: "4.6"
+    food: "4.4"
+    total: "9.0"
