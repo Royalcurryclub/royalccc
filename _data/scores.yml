@@ -1,4 +1,9 @@
 scores:
+  - when: Feb-26
+    visitation: Arjee Bharjee & Volstead
+    service: "3.4"
+    food: "3.4"
+    total: "6.8"
   - when: Jan-26
     visitation: Corianders & Dux Central
     service: "4.3"
@@ -605,8 +610,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Feb-26
-    visitation: Arjee Bharjee & Volstead
-    service: "3.4"
-    food: "3.4"
-    total: "6.8"
+  - when: Mar-26
+    visitation: Indian Restaurant & Kava Lounge & The Church Pub
+    service: "4.8"
+    food: "4.7"
+    total: "9.5"
