@@ -615,3 +615,8 @@ scores:
     service: "4.8"
     food: "4.7"
     total: "9.5"
+  - when: Apr-26
+    visitation: Indian Moments & StockXChange Bar & Grill
+    service: "3.8"
+    food: "4.0"
+    total: "7.8"
