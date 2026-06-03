@@ -544,3 +544,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
+  - when: Feb-25
+    visitation: Gorkhali Chulo Curry & Bills Bar and Bistro
+    service: "4.5"
+    food: "4.0"
+    total: "8.5"
