@@ -1,4 +1,9 @@
 scores:
+  - when: Nov-25 Annual Outing
+    visitation: Nawab Eatery & The Dubliner & The Brown Pub & The Blue Pub
+    service: "4.7"
+    food: "4.3"
+    total: "9.0"
   - when: Nov-25
     visitation: Flavors Kebab and Biryani & The Good Home Wigram
     service: "3.3"
@@ -590,8 +595,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Nov-25 Annual Outing
-    visitation: Nawab Eatery & The Dubliner & The Brown Pub & The Blue Pub
-    service: "4.7"
-    food: "4.3"
-    total: "9.0"
+  - when: Dec-25
+    visitation: Two Fat Indians City & Craft Embassy
+    service: "4.3"
+    food: "3.0"
+    total: "7.3"
