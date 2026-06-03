@@ -1,4 +1,19 @@
 scores:
+  - when: Jun-25
+    visitation: Welcome India & Rose and Thistle
+    service: "4.6"
+    food: "4.4"
+    total: "9.0"
+  - when: May-25
+    visitation: Saket Opawa & The Tannery
+    service: "4.3"
+    food: "4.6"
+    total: "8.9"
+  - when: Apr-25
+    visitation: Indian Springs Eatery & Speights Alehouse
+    service: "4.3"
+    food: "4.0"
+    total: "8.3"
   - when: Mar-25
     visitation: "MG Road Eatery & Two Thumbs Brewery Colombo "
     service: "3.3"
@@ -554,18 +569,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Apr-25
-    visitation: Indian Springs Eatery & Speights Alehouse
-    service: "4.3"
-    food: "4.0"
-    total: "8.3"
-  - when: May-25
-    visitation: Saket Opawa & The Tannery
-    service: "4.3"
-    food: "4.6"
-    total: "8.9"
-  - when: Jun-25
-    visitation: Welcome India & Rose and Thistle
-    service: "4.6"
-    food: "4.4"
-    total: "9.0"
+  - when: Jul-25
+    visitation: "Saket Edgeware & Bailies Bar "
+    service: "3.6"
+    food: "3.7"
+    total: "7.3"
