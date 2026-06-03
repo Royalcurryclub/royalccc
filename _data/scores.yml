@@ -1,4 +1,9 @@
 scores:
+  - when: Aug-25
+    visitation: Indian Moments & StockXChange Bar & Grill
+    service: "3.6"
+    food: "3.8"
+    total: "7.4"
   - when: Jul-25
     visitation: "Saket Edgeware & Bailies Bar "
     service: "3.6"
@@ -574,8 +579,9 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Aug-25
-    visitation: Indian Moments & StockXChange Bar & Grill
-    service: "3.6"
-    food: "3.8"
-    total: "7.4"
+  - when: Sep-25
+    review_url: ""
+    service: "4.8"
+    food: "4.7"
+    total: "8.5"
+    visitation: Ceylon Kitchen & Volstead
