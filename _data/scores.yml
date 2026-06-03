@@ -1,4 +1,9 @@
 scores:
+  - when: Feb-25
+    visitation: Gorkhali Chulo Curry & Bills Bar and Bistro
+    service: "4.5"
+    food: "4.0"
+    total: "8.5"
   - when: Jan-25
     visitation: Arjee Bhajee & Volstead
     service: "4.5"
@@ -544,8 +549,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Feb-25
-    visitation: Gorkhali Chulo Curry & Bills Bar and Bistro
-    service: "4.5"
-    food: "4.0"
-    total: "8.5"
+  - when: Mar-25
+    visitation: "MG Road Eatery & Two Thumbs Brewery Colombo "
+    service: "3.3"
+    food: "4.3"
+    total: "7.6"
