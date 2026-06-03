@@ -1,541 +1,546 @@
 scores:
-- when: Dec-24
-  visitation: Indian Fendalton & Misceos
-  review_url: /december-2024-indian-fendalton-misceos/
-  service: '4.3'
-  food: '4.3'
-  total: '8.6'
-- when: Nov-24
-  visitation: NZ vs England Cricket & Punky Brewster
-  review_url: /november-2024-annual-outing-nz-vs-england-cricket-punky-brewster/
-  service: '5.0'
-  food: '5.0'
-  total: '10'
-- when: Nov-24
-  visitation: Perfect Plate & Fox & Ferret
-  review_url: /november-2024-perfect-plate-fox-ferret/
-  service: '4.0'
-  food: '3.8'
-  total: '7.8'
-- when: Oct-24
-  visitation: Indian Zaika & No.4 Bar
-  review_url: /october-2024-indian-zaika-no-4-bar/
-  service: '3.6'
-  food: '4.2'
-  total: '7.8'
-- when: Sep-24
-  visitation: Gunpowder Indian Restaurant & Bar & Jolly Poacher
-  review_url: /september-2024-gunpowder-indian-restaurant-and-bar-jolly-poacher/
-  service: '4.5'
-  food: '3.8'
-  total: '8.3'
-- when: Aug-24
-  visitation: Tudor's Restaurant & Bar & The Bar
-  review_url: /august-2024-tudors-restaurant-and-bar/
-  service: '4.0'
-  food: '2.0'
-  total: '6.0'
-- when: Jul-24
-  visitation: Saket & Bailies Bar
-  review_url: /july-2024-saket-bailies-bar/
-  service: '3.8'
-  food: '4.3'
-  total: '8.1'
-- when: Jun-24
-  visitation: Coriander's Rolleston & Drafters Bar
-  review_url: /june-2024-corianders-rolleston-drafters-bar/
-  service: '3.4'
-  food: '4'
-  total: '7.4'
-- when: May-24
-  visitation: Pepper Bridge & The Miller
-  review_url: /may-2024-pepper-bridge-and-the-miller/
-  service: '3.8'
-  food: '4.6'
-  total: '8.4'
-- when: Apr-24
-  visitation: Coriander's Sumner & Trev's Man Cave
-  review_url: /april-2024-corianders-sumner-trevs-man-cave/
-  service: '3.8'
-  food: '4.5'
-  total: '8.3'
-- when: Mar-24
-  visitation: MG Road Eatery & Two Thumbs Brewery
-  review_url: /march-2024-mg-road-eatery-two-thumbs-brewery/
-  service: '3.8'
-  food: '4.8'
-  total: '8.6'
-- when: Feb-24
-  visitation: The Bombay Brasserie & Sideline Sports Bar
-  review_url: /february-2024-the-bombay-brasserie-sideline-sports-bar/
-  service: '4.5'
-  food: '4.6'
-  total: '9.1'
-- when: Jan-24
-  visitation: Mumbaiwala & Mr Brightside Rooftop Bar
-  review_url: /january-2024-mumbaiwala-mr-brightside-rooftop-bar/
-  service: '4.0'
-  food: '4.0'
-  total: '8.0'
-- when: Dec-23
-  visitation: Saket Prebbleton & The Good Home
-  review_url: /december-2023-saket-prebbleton-the-good-home/
-  service: '4.7'
-  food: '4.7'
-  total: '9.4'
-- when: Nov-23
-  visitation: South Island Beerfest & Afghan Restaurant
-  review_url: /november-2023-annual-outing-south-island-beerfest-afghan-restaurant/
-  service: '4.5'
-  food: '5'
-  total: '9.5'
-- when: Nov-23
-  visitation: Indian Zaika & Sprig + Fern
-  review_url: /november-2023-indian-zaika-sprig-fern/
-  service: '3.4'
-  food: '4.4'
-  total: '7.8'
-- when: Oct-23
-  visitation: Basmatis Indian Eatery & Paddy McNaughton's Irish Bar
-  review_url: /october-2023-basmatis-indian-eatery-paddy-mcnaughtons-irish-bar/
-  service: '4'
-  food: '4.7'
-  total: '8.7'
-- when: Sep-23
-  visitation: Indian Pearl & Two Thumbs Brewery
-  review_url: /september-2023-indian-pearl-two-thumbs-brewery/
-  service: '4'
-  food: '3.3'
-  total: '7.3'
-- when: Aug-23
-  visitation: Corianders Prestons & Rowdy Kitchen
-  review_url: /august-2023-corianders-prestons-rowdy-kitchen/
-  service: '4.9'
-  food: '4.3'
-  total: '9.2'
-- when: Jul-23
-  visitation: Saket & Bailies Bar
-  review_url: /july-2023-saket-bailies-bar/
-  service: '4.4'
-  food: '4.7'
-  total: '9.1'
-- when: Jun-23
-  visitation: Indian Roots & The Long Knight
-  review_url: /june-2023-indian-roots-the-long-knight/
-  service: '3.1'
-  food: '4.5'
-  total: '7.6'
-- when: May-23
-  visitation: Indian Ocean & Craft Beer Kitchen
-  review_url: /may-2023-indian-ocean-craft-beer-kitchen/
-  service: '3.4'
-  food: '3.8'
-  total: '7.2'
-- when: Apr-23
-  visitation: Bombay Butler & Moon Under Water
-  review_url: /april-2023-bombay-butler-moon-under-water/
-  service: '2'
-  food: '3.3'
-  total: '5.3'
-- when: Mar-23
-  visitation: Saket Prebbleton & The Good Home
-  review_url: /march-2023-saket-prebbleton-the-good-home/
-  service: '3.6'
-  food: '3.7'
-  total: '7.3'
-- when: Feb-23
-  visitation: Delhi 6 & 12 Bar
-  review_url: /february-2023-delhi-6-12-bar/
-  service: '4'
-  food: '4.5'
-  total: '8.5'
-- when: Jan-23
-  visitation: Two Fat Indians City & Craft Embassy
-  review_url: /january-2023-two-fat-indians-city-craft-embassy/
-  service: '2.3'
-  food: '2.3'
-  total: '4.6'
-- when: Dec-22
-  visitation: Delhi Belly & The Bog
-  review_url: /december-2022-delhi-belly-the-bog/
-  service: '3.9'
-  food: '4.4'
-  total: '8.3'
-- when: Nov-22
-  visitation: Pinch of Spice & The Sounds
-  review_url: /november-2022-pinch-of-spice-the-sounds/
-  service: '4'
-  food: '3.8'
-  total: '7.8'
-- when: Oct-22
-  visitation: Himalayas & Two Thumbs Brewery
-  review_url: /october-2022-himalayas-two-thumbs-brewery/
-  service: '4.5'
-  food: '4.8'
-  total: '9.3'
-- when: Sep-22
-  visitation: Ceylon Kitchen & Kaiser Brew Garden
-  review_url: /september-2022-ceylon-kitchen-kaiser-brew-garden/
-  service: '4.4'
-  food: '4.8'
-  total: '9.2'
-- when: Aug-22
-  visitation: Top in Town & The Craic
-  review_url: /august-2022-top-in-town-the-craic/
-  service: '3.8'
-  food: '3.3'
-  total: '7.2'
-- when: Jul-22
-  visitation: Saket & Bailies Bar
-  review_url: /july-2022-saket-bailies-bar/
-  service: '4.8'
-  food: '4'
-  total: '8.8'
-- when: Jun-22
-  visitation: Pothichor & Joe's Garage
-  review_url: /june-2022-pothichor-joes-garage/
-  service: '4.4'
-  food: '3.8'
-  total: '8.2'
-- when: May-22
-  visitation: Gorkhali Chulo & Bills Bar and Bistro
-  review_url: /may-2022-gorkhali-chulo-bills-bar-and-bistro/
-  service: '4.3'
-  food: '4.3'
-  total: '8.6'
-- when: Apr-22
-  visitation: Coriander's Sumner & Clink
-  review_url: /april-2022-corianders-sumner-clink/
-  service: '4'
-  food: '4'
-  total: '8'
-- when: Mar-22
-  visitation: Roti Chai & Armadillo's Halswell
-  review_url: /march-2022-roti-chai-armadillos-halswell/
-  service: '4.3'
-  food: '4.3'
-  total: '8.6'
-- when: Feb-22
-  visitation: Chilli Flakes & The Black Pearl Tavern
-  review_url: /february-2022-chilli-flakes-the-black-pearl-tavern/
-  service: '2.7'
-  food: '4.2'
-  total: '6.9'
-- when: Jan-22
-  visitation: Mumbaiwala & The Craft Embassy
-  review_url: /january-2022-mumbaiwala-the-craft-embassy/
-  service: '4'
-  food: '4'
-  total: '8'
-- when: Dec-21
-  visitation: Two Fat Indians Northlink & The Rose and Thistle
-  review_url: /december-2021-two-fat-indians-northlink-the-rose-and-thistle/
-  service: '3.8'
-  food: '3.5'
-  total: '7.3'
-- when: Nov-21 Annual Outing
-  visitation: Coriander's City & The Bog
-  review_url: /november-2021-annual-outing-corianders-city-the-bog/
-  service: '4.5'
-  food: '4.5'
-  total: '9'
-- when: Nov-21
-  visitation: Chanakya South Indian Cuisine & The Penguin Arms
-  review_url: /november-2021-chanakya-south-indian-cuisine-the-penguin-arms/
-  service: '4.6'
-  food: '4.7'
-  total: '9.3'
-- when: Oct-21
-  visitation: Saffron Spice & Hornby Working Mens Club
-  review_url: /october-2021-saffron-spice-hornby-working-mens-club/
-  service: '4.3'
-  food: '4.0'
-  total: '8.3'
-- when: Aug-21
-  visitation: Everest Indian Restaurant & Woolston Sports Bar
-  review_url: /august-2021-everest-indian-restaurant-woolston-sports-bar/
-  service: '4.3'
-  food: '3.6'
-  total: '7.9'
-- when: Jul-21
-  visitation: Saket & Bailies Bar
-  review_url: /july-2021-saket-bailies-bar/
-  service: '4.2'
-  food: '4.0'
-  total: '8.2'
-- when: Jun-21
-  visitation: Punjabwalla & Welles St
-  review_url: /june-2021-punjabwalla-welles-st/
-  service: '3.3'
-  food: '3.7'
-  total: '7.0'
-- when: May-21
-  visitation: Bombay Butler & The Long Knight
-  review_url: /may-2021-bombay-butler-the-long-knight/
-  service: '4.0'
-  food: '4.0'
-  total: '8.0'
-- when: Apr-21
-  visitation: Magic Masala & The Tannery
-  review_url: /april-2021-magic-masala-cassels/
-  service: '2.0'
-  food: '3.5'
-  total: '5.5'
-- when: Mar-21
-  visitation: The Kingfisher & The Good Home
-  review_url: /march-2021-the-kingfisher-the-good-home/
-  service: '3.7'
-  food: '3.9'
-  total: '7.6'
-- when: Feb-21
-  visitation: South of India & Penguin Arms
-  review_url: /february-2021-south-of-india-the-penguin-arms/
-  service: '4.3'
-  food: '3.8'
-  total: '8.1'
-- when: Jan-21
-  visitation: Basmati's Indian Eatery & Pink Lady Rooftop Bar
-  review_url: /january-2021-basmatis-indian-eatery-pink-lady-rooftop-bar/
-  service: '4.0'
-  food: '3.5'
-  total: '7.5'
-- when: Dec-20
-  visitation: Roti Chai & Armadillo's
-  review_url: /december-2020-roti-chai-armadillos/
-  service: '4.3'
-  food: '4.8'
-  total: '9.1'
-- when: Nov-20 Annual Outing
-  visitation: Afghan Restaurant & Wigram Brewery
-  review_url: /november-2020-annual-outing-afghan-restaurant-wigram-brewery/
-  service: '5.0'
-  food: '5.0'
-  total: '10'
-- when: Nov-20
-  visitation: The Majestic Indian Bistro & The Brewery
-  review_url: /november-2020-the-majestic-indian-bistro-the-brewery/
-  service: '4.5'
-  food: '4.5'
-  total: '9.0'
-- when: Oct-20
-  visitation: The Bombay Brasserie & Sideline Sports Bar
-  review_url: /october-the-bombay-brasserie-sideline-sports-bar/
-  service: '3.5'
-  food: '3.5'
-  total: '7.0'
-- when: Sep-20
-  visitation: Samairaz & Flax Bar
-  review_url: /september-2020-samairaz-flax-bar/
-  service: '4.7'
-  food: '4.3'
-  total: '9.0'
-- when: Aug-20
-  visitation: Roti Chai & Armadillo's
-  review_url: /august-2020-roti-chai-armadillos/
-  service: '5.0'
-  food: '5.0'
-  total: '10'
-- when: Jul-20
-  visitation: Saket & Bailies Bar
-  review_url: /july-2020-saket-bailies-bar/
-  service: '4.1'
-  food: '3.9'
-  total: '8.0'
-- when: Jun-20
-  visitation: Little India & Aikmans
-  review_url: /june-2020-little-india-aikmans/
-  service: '3.6'
-  food: '4.3'
-  total: '7.9'
-- when: May-20
-  visitation: Corona-Edition 2
-  review_url: /may-2020-corona-edition-2-support-your-local/
-  service: '5.0'
-  food: '4.5'
-  total: '9.5'
-- when: Apr-20
-  visitation: Corona-Edition 1
-  review_url: /april-2020-corona-edition-1-my-makaan-your-makaan/
-  service: '3.0'
-  food: '4.3'
-  total: '7.3'
-- when: Mar-20
-  visitation: Cinnamon Spice & Temps Bar
-  review_url: /march-2020-cinnamon-spice-temps-bar/
-  service: '4.8'
-  food: '4.6'
-  total: '9.4'
-- when: Feb-20
-  visitation: Ministry of Masala & Smash Palace
-  review_url: /february-2020-ministry-of-masala-smash-palace/
-  service: '3.5'
-  food: '4.0'
-  total: '7.5'
-- when: Jan-20
-  visitation: Two Fat Indians and Dux Central
-  review_url: /january-2020-two-fat-indians-dux-central/
-  service: '3.0'
-  food: '3.4'
-  total: '6.4'
-- when: Dec-19
-  visitation: Everest and Civil & Naval
-  review_url: /december-2019-everest-indian-restaurant-civil-and-naval/
-  service: '4.3'
-  food: '4.3'
-  total: '8.6'
-- when: Nov-19 Annual Outing
-  visitation: Afghan Restaurant & Riccarton Races
-  review_url: /november-2019-annual-outing-the-afghan-restaurant-riccarton-races/
-  service: '3.9'
-  food: '4.8'
-  total: '8.7'
-- when: Nov-19
-  visitation: Indian Zaika Restaurant and No. 4 Bar
-  review_url: /november-2019-indian-zaika-and-no-4-bar/
-  service: '2.9'
-  food: '3.7'
-  total: '6.6'
-- when: Oct-19
-  visitation: Coriander's and Joe's Garage
-  review_url: /october-2019-corianders-and-joes-garage/
-  service: '4.0'
-  food: '3.9'
-  total: '7.9'
-- when: Sep-19
-  visitation: Bolina Indian Sweets & Restaurant and Mama Hooch
-  review_url: /september-2019-bolina-indian-sweets-restaurant-and-mama-hooch/
-  service: '4.0'
-  food: '4.3'
-  total: '8.3'
-- when: Aug-19
-  visitation: Nilesh Palace Indian Cuisine and Armadillo’s
-  review_url: /august-2019-nilesh-palace-indian-cuisine-and-armadillos-t/
-  service: '4.6'
-  food: '4.4'
-  total: '9.0'
-- when: Jul-19
-  visitation: Delhi Belly and The Bog
-  review_url: /july-2019-delhi-belly-and-the-bog/
-  service: '4.0'
-  food: '4.3'
-  total: '8.3'
-- when: Jun-19
-  visitation: Touch the Taste of India and Speights Ale House
-  review_url: /june-2019-touch-the-taste-of-india-and-speights-ale-house/
-  service: '3.0'
-  food: '4.1'
-  total: '7.1'
-- when: May-19
-  visitation: Permit Room and OGB
-  review_url: /may-2019-permit-room-and-o-b-g-bar/
-  service: '4.4'
-  food: '3.3'
-  total: '7.7'
-- when: Apr-19
-  visitation: Own Masala and Clink
-  review_url: /april-2019-own-masala-and-clink-bar/
-  service: '3.5'
-  food: '3.8'
-  total: '7.3'
-- when: Mar-19
-  visitation: Indian Fendalton and Misceo Cafe & Bar
-  review_url: /march-2019-indian-fendalton-and-misceo-cafe-bar/
-  service: '4.7'
-  food: '4.4'
-  total: '9.1'
-- when: Feb-19
-  visitation: Mushroom and The Craic Irish Bar
-  review_url: /february-2019-mushroom-and-the-craic-irish-bar/
-  service: '3.3'
-  food: '3.7'
-  total: '7.0'
-- when: Jan-19
-  visitation: Two Fat Indians and Cleaver & Co.
-  review_url: /january-2019-two-fat-indians-and-cleaver-co/
-  service: '4.0'
-  food: '4.3'
-  total: '8.3'
-- when: Dec-18
-  visitation: Mumbaiwala & The Craft Embassy
-  review_url: /december-2018-mumbaiwala-and-the-craft-embassy/
-  service: '4.0'
-  food: '4.3'
-  total: '8.3'
-- when: Nov-18 Annual Outing
-  visitation: Plaza Indian Restaurant & Tandoor & Cafe Cortado
-  review_url: ''
-  service: '3.5'
-  food: '3.0'
-  total: '6.5'
-- when: Nov-18 Annual Outing
-  visitation: Kaikoura Indian Restaurant
-  review_url: ''
-  service: '3.0'
-  food: '3.3'
-  total: '6.3'
-- when: Nov-18
-  visitation: Arjee Bhajee & Volstead
-  review_url: /november-2018-arjee-bhajee-and-volstead/
-  service: '4.0'
-  food: '3.8'
-  total: '7.8'
-- when: Oct-18
-  visitation: Ferry Indians & The Brewery
-  review_url: /october-2018-ferry-indians-and-the-brewery/
-  service: '3.7'
-  food: '3.7'
-  total: '7.4'
-- when: Sep-18
-  visitation: Own Masala & Clink
-  review_url: /september-2018-own-masala-and-clink/
-  service: '3.7'
-  food: '4.3'
-  total: '8.0'
-- when: Aug-18
-  visitation: Saket & Baillies Bar
-  review_url: /august-2018-saket-and-bailies-bar/
-  service: '3.7'
-  food: '3.4'
-  total: '7.1'
-- when: Jul-18
-  visitation: Royal Tandoor & Joe's Garage
-  review_url: /july-2018-royal-tandoor-and-joes-garage/
-  service: '4.2'
-  food: '4.2'
-  total: '8.4'
-- when: Jun-18
-  visitation: Little India (Spitfire Sq) & Lonestar
-  review_url: /june-2018-little-india-spitfire-sq-and-lonestar/
-  service: '4.4'
-  food: '4.2'
-  total: '8.6'
-- when: May-18
-  visitation: South of India & Pierside Cafe & Bar
-  review_url: /may-2018-south-of-india-and-pierside-cafe-bar/
-  service: '4.2'
-  food: '4.5'
-  total: '8.7'
-- when: Apr-18
-  visitation: Bombay Butler & Belgian Beer Café
-  review_url: /april-2018-bombay-butler-and-belgian-beer-cafe/
-  service: '3.4'
-  food: '4.0'
-  total: '7.4'
-- when: Mar-18
-  visitation: Tandoori Palace & The Foundry
-  review_url: /march-2018-tandoori-palace-and-the-foundry/
-  service: '4.4'
-  food: '4.0'
-  total: '8.4'
-- when: Feb-18
-  visitation: Curry Time & Coasters
-  review_url: /february-2018-curry-time-and-coasters/
-  service: '3.8'
-  food: '3.4'
-  total: '7.2'
-- when: Jan-18
-  visitation: Coriander's (St Asaph St.) & Baretta Bar
-  review_url: /january-2018-corianders-and-baretta-bar/
-  service: '1.2'
-  food: '3.3'
-  total: '4.5'
+  - when: Dec-24
+    visitation: Indian Fendalton & Misceos
+    review_url: /december-2024-indian-fendalton-misceos/
+    service: "4.3"
+    food: "4.3"
+    total: "8.6"
+  - when: Nov-24
+    visitation: NZ vs England Cricket & Punky Brewster
+    review_url: /november-2024-annual-outing-nz-vs-england-cricket-punky-brewster/
+    service: "5.0"
+    food: "5.0"
+    total: "10"
+  - when: Nov-24
+    visitation: Perfect Plate & Fox & Ferret
+    review_url: /november-2024-perfect-plate-fox-ferret/
+    service: "4.0"
+    food: "3.8"
+    total: "7.8"
+  - when: Oct-24
+    visitation: Indian Zaika & No.4 Bar
+    review_url: /october-2024-indian-zaika-no-4-bar/
+    service: "3.6"
+    food: "4.2"
+    total: "7.8"
+  - when: Sep-24
+    visitation: Gunpowder Indian Restaurant & Bar & Jolly Poacher
+    review_url: /september-2024-gunpowder-indian-restaurant-and-bar-jolly-poacher/
+    service: "4.5"
+    food: "3.8"
+    total: "8.3"
+  - when: Aug-24
+    visitation: Tudor's Restaurant & Bar & The Bar
+    review_url: /august-2024-tudors-restaurant-and-bar/
+    service: "4.0"
+    food: "2.0"
+    total: "6.0"
+  - when: Jul-24
+    visitation: Saket & Bailies Bar
+    review_url: /july-2024-saket-bailies-bar/
+    service: "3.8"
+    food: "4.3"
+    total: "8.1"
+  - when: Jun-24
+    visitation: Coriander's Rolleston & Drafters Bar
+    review_url: /june-2024-corianders-rolleston-drafters-bar/
+    service: "3.4"
+    food: "4"
+    total: "7.4"
+  - when: May-24
+    visitation: Pepper Bridge & The Miller
+    review_url: /may-2024-pepper-bridge-and-the-miller/
+    service: "3.8"
+    food: "4.6"
+    total: "8.4"
+  - when: Apr-24
+    visitation: Coriander's Sumner & Trev's Man Cave
+    review_url: /april-2024-corianders-sumner-trevs-man-cave/
+    service: "3.8"
+    food: "4.5"
+    total: "8.3"
+  - when: Mar-24
+    visitation: MG Road Eatery & Two Thumbs Brewery
+    review_url: /march-2024-mg-road-eatery-two-thumbs-brewery/
+    service: "3.8"
+    food: "4.8"
+    total: "8.6"
+  - when: Feb-24
+    visitation: The Bombay Brasserie & Sideline Sports Bar
+    review_url: /february-2024-the-bombay-brasserie-sideline-sports-bar/
+    service: "4.5"
+    food: "4.6"
+    total: "9.1"
+  - when: Jan-24
+    visitation: Mumbaiwala & Mr Brightside Rooftop Bar
+    review_url: /january-2024-mumbaiwala-mr-brightside-rooftop-bar/
+    service: "4.0"
+    food: "4.0"
+    total: "8.0"
+  - when: Dec-23
+    visitation: Saket Prebbleton & The Good Home
+    review_url: /december-2023-saket-prebbleton-the-good-home/
+    service: "4.7"
+    food: "4.7"
+    total: "9.4"
+  - when: Nov-23
+    visitation: South Island Beerfest & Afghan Restaurant
+    review_url: /november-2023-annual-outing-south-island-beerfest-afghan-restaurant/
+    service: "4.5"
+    food: "5"
+    total: "9.5"
+  - when: Nov-23
+    visitation: Indian Zaika & Sprig + Fern
+    review_url: /november-2023-indian-zaika-sprig-fern/
+    service: "3.4"
+    food: "4.4"
+    total: "7.8"
+  - when: Oct-23
+    visitation: Basmatis Indian Eatery & Paddy McNaughton's Irish Bar
+    review_url: /october-2023-basmatis-indian-eatery-paddy-mcnaughtons-irish-bar/
+    service: "4"
+    food: "4.7"
+    total: "8.7"
+  - when: Sep-23
+    visitation: Indian Pearl & Two Thumbs Brewery
+    review_url: /september-2023-indian-pearl-two-thumbs-brewery/
+    service: "4"
+    food: "3.3"
+    total: "7.3"
+  - when: Aug-23
+    visitation: Corianders Prestons & Rowdy Kitchen
+    review_url: /august-2023-corianders-prestons-rowdy-kitchen/
+    service: "4.9"
+    food: "4.3"
+    total: "9.2"
+  - when: Jul-23
+    visitation: Saket & Bailies Bar
+    review_url: /july-2023-saket-bailies-bar/
+    service: "4.4"
+    food: "4.7"
+    total: "9.1"
+  - when: Jun-23
+    visitation: Indian Roots & The Long Knight
+    review_url: /june-2023-indian-roots-the-long-knight/
+    service: "3.1"
+    food: "4.5"
+    total: "7.6"
+  - when: May-23
+    visitation: Indian Ocean & Craft Beer Kitchen
+    review_url: /may-2023-indian-ocean-craft-beer-kitchen/
+    service: "3.4"
+    food: "3.8"
+    total: "7.2"
+  - when: Apr-23
+    visitation: Bombay Butler & Moon Under Water
+    review_url: /april-2023-bombay-butler-moon-under-water/
+    service: "2"
+    food: "3.3"
+    total: "5.3"
+  - when: Mar-23
+    visitation: Saket Prebbleton & The Good Home
+    review_url: /march-2023-saket-prebbleton-the-good-home/
+    service: "3.6"
+    food: "3.7"
+    total: "7.3"
+  - when: Feb-23
+    visitation: Delhi 6 & 12 Bar
+    review_url: /february-2023-delhi-6-12-bar/
+    service: "4"
+    food: "4.5"
+    total: "8.5"
+  - when: Jan-23
+    visitation: Two Fat Indians City & Craft Embassy
+    review_url: /january-2023-two-fat-indians-city-craft-embassy/
+    service: "2.3"
+    food: "2.3"
+    total: "4.6"
+  - when: Dec-22
+    visitation: Delhi Belly & The Bog
+    review_url: /december-2022-delhi-belly-the-bog/
+    service: "3.9"
+    food: "4.4"
+    total: "8.3"
+  - when: Nov-22
+    visitation: Pinch of Spice & The Sounds
+    review_url: /november-2022-pinch-of-spice-the-sounds/
+    service: "4"
+    food: "3.8"
+    total: "7.8"
+  - when: Oct-22
+    visitation: Himalayas & Two Thumbs Brewery
+    review_url: /october-2022-himalayas-two-thumbs-brewery/
+    service: "4.5"
+    food: "4.8"
+    total: "9.3"
+  - when: Sep-22
+    visitation: Ceylon Kitchen & Kaiser Brew Garden
+    review_url: /september-2022-ceylon-kitchen-kaiser-brew-garden/
+    service: "4.4"
+    food: "4.8"
+    total: "9.2"
+  - when: Aug-22
+    visitation: Top in Town & The Craic
+    review_url: /august-2022-top-in-town-the-craic/
+    service: "3.8"
+    food: "3.3"
+    total: "7.2"
+  - when: Jul-22
+    visitation: Saket & Bailies Bar
+    review_url: /july-2022-saket-bailies-bar/
+    service: "4.8"
+    food: "4"
+    total: "8.8"
+  - when: Jun-22
+    visitation: Pothichor & Joe's Garage
+    review_url: /june-2022-pothichor-joes-garage/
+    service: "4.4"
+    food: "3.8"
+    total: "8.2"
+  - when: May-22
+    visitation: Gorkhali Chulo & Bills Bar and Bistro
+    review_url: /may-2022-gorkhali-chulo-bills-bar-and-bistro/
+    service: "4.3"
+    food: "4.3"
+    total: "8.6"
+  - when: Apr-22
+    visitation: Coriander's Sumner & Clink
+    review_url: /april-2022-corianders-sumner-clink/
+    service: "4"
+    food: "4"
+    total: "8"
+  - when: Mar-22
+    visitation: Roti Chai & Armadillo's Halswell
+    review_url: /march-2022-roti-chai-armadillos-halswell/
+    service: "4.3"
+    food: "4.3"
+    total: "8.6"
+  - when: Feb-22
+    visitation: Chilli Flakes & The Black Pearl Tavern
+    review_url: /february-2022-chilli-flakes-the-black-pearl-tavern/
+    service: "2.7"
+    food: "4.2"
+    total: "6.9"
+  - when: Jan-22
+    visitation: Mumbaiwala & The Craft Embassy
+    review_url: /january-2022-mumbaiwala-the-craft-embassy/
+    service: "4"
+    food: "4"
+    total: "8"
+  - when: Dec-21
+    visitation: Two Fat Indians Northlink & The Rose and Thistle
+    review_url: /december-2021-two-fat-indians-northlink-the-rose-and-thistle/
+    service: "3.8"
+    food: "3.5"
+    total: "7.3"
+  - when: Nov-21 Annual Outing
+    visitation: Coriander's City & The Bog
+    review_url: /november-2021-annual-outing-corianders-city-the-bog/
+    service: "4.5"
+    food: "4.5"
+    total: "9"
+  - when: Nov-21
+    visitation: Chanakya South Indian Cuisine & The Penguin Arms
+    review_url: /november-2021-chanakya-south-indian-cuisine-the-penguin-arms/
+    service: "4.6"
+    food: "4.7"
+    total: "9.3"
+  - when: Oct-21
+    visitation: Saffron Spice & Hornby Working Mens Club
+    review_url: /october-2021-saffron-spice-hornby-working-mens-club/
+    service: "4.3"
+    food: "4.0"
+    total: "8.3"
+  - when: Aug-21
+    visitation: Everest Indian Restaurant & Woolston Sports Bar
+    review_url: /august-2021-everest-indian-restaurant-woolston-sports-bar/
+    service: "4.3"
+    food: "3.6"
+    total: "7.9"
+  - when: Jul-21
+    visitation: Saket & Bailies Bar
+    review_url: /july-2021-saket-bailies-bar/
+    service: "4.2"
+    food: "4.0"
+    total: "8.2"
+  - when: Jun-21
+    visitation: Punjabwalla & Welles St
+    review_url: /june-2021-punjabwalla-welles-st/
+    service: "3.3"
+    food: "3.7"
+    total: "7.0"
+  - when: May-21
+    visitation: Bombay Butler & The Long Knight
+    review_url: /may-2021-bombay-butler-the-long-knight/
+    service: "4.0"
+    food: "4.0"
+    total: "8.0"
+  - when: Apr-21
+    visitation: Magic Masala & The Tannery
+    review_url: /april-2021-magic-masala-cassels/
+    service: "2.0"
+    food: "3.5"
+    total: "5.5"
+  - when: Mar-21
+    visitation: The Kingfisher & The Good Home
+    review_url: /march-2021-the-kingfisher-the-good-home/
+    service: "3.7"
+    food: "3.9"
+    total: "7.6"
+  - when: Feb-21
+    visitation: South of India & Penguin Arms
+    review_url: /february-2021-south-of-india-the-penguin-arms/
+    service: "4.3"
+    food: "3.8"
+    total: "8.1"
+  - when: Jan-21
+    visitation: Basmati's Indian Eatery & Pink Lady Rooftop Bar
+    review_url: /january-2021-basmatis-indian-eatery-pink-lady-rooftop-bar/
+    service: "4.0"
+    food: "3.5"
+    total: "7.5"
+  - when: Dec-20
+    visitation: Roti Chai & Armadillo's
+    review_url: /december-2020-roti-chai-armadillos/
+    service: "4.3"
+    food: "4.8"
+    total: "9.1"
+  - when: Nov-20 Annual Outing
+    visitation: Afghan Restaurant & Wigram Brewery
+    review_url: /november-2020-annual-outing-afghan-restaurant-wigram-brewery/
+    service: "5.0"
+    food: "5.0"
+    total: "10"
+  - when: Nov-20
+    visitation: The Majestic Indian Bistro & The Brewery
+    review_url: /november-2020-the-majestic-indian-bistro-the-brewery/
+    service: "4.5"
+    food: "4.5"
+    total: "9.0"
+  - when: Oct-20
+    visitation: The Bombay Brasserie & Sideline Sports Bar
+    review_url: /october-the-bombay-brasserie-sideline-sports-bar/
+    service: "3.5"
+    food: "3.5"
+    total: "7.0"
+  - when: Sep-20
+    visitation: Samairaz & Flax Bar
+    review_url: /september-2020-samairaz-flax-bar/
+    service: "4.7"
+    food: "4.3"
+    total: "9.0"
+  - when: Aug-20
+    visitation: Roti Chai & Armadillo's
+    review_url: /august-2020-roti-chai-armadillos/
+    service: "5.0"
+    food: "5.0"
+    total: "10"
+  - when: Jul-20
+    visitation: Saket & Bailies Bar
+    review_url: /july-2020-saket-bailies-bar/
+    service: "4.1"
+    food: "3.9"
+    total: "8.0"
+  - when: Jun-20
+    visitation: Little India & Aikmans
+    review_url: /june-2020-little-india-aikmans/
+    service: "3.6"
+    food: "4.3"
+    total: "7.9"
+  - when: May-20
+    visitation: Corona-Edition 2
+    review_url: /may-2020-corona-edition-2-support-your-local/
+    service: "5.0"
+    food: "4.5"
+    total: "9.5"
+  - when: Apr-20
+    visitation: Corona-Edition 1
+    review_url: /april-2020-corona-edition-1-my-makaan-your-makaan/
+    service: "3.0"
+    food: "4.3"
+    total: "7.3"
+  - when: Mar-20
+    visitation: Cinnamon Spice & Temps Bar
+    review_url: /march-2020-cinnamon-spice-temps-bar/
+    service: "4.8"
+    food: "4.6"
+    total: "9.4"
+  - when: Feb-20
+    visitation: Ministry of Masala & Smash Palace
+    review_url: /february-2020-ministry-of-masala-smash-palace/
+    service: "3.5"
+    food: "4.0"
+    total: "7.5"
+  - when: Jan-20
+    visitation: Two Fat Indians and Dux Central
+    review_url: /january-2020-two-fat-indians-dux-central/
+    service: "3.0"
+    food: "3.4"
+    total: "6.4"
+  - when: Dec-19
+    visitation: Everest and Civil & Naval
+    review_url: /december-2019-everest-indian-restaurant-civil-and-naval/
+    service: "4.3"
+    food: "4.3"
+    total: "8.6"
+  - when: Nov-19 Annual Outing
+    visitation: Afghan Restaurant & Riccarton Races
+    review_url: /november-2019-annual-outing-the-afghan-restaurant-riccarton-races/
+    service: "3.9"
+    food: "4.8"
+    total: "8.7"
+  - when: Nov-19
+    visitation: Indian Zaika Restaurant and No. 4 Bar
+    review_url: /november-2019-indian-zaika-and-no-4-bar/
+    service: "2.9"
+    food: "3.7"
+    total: "6.6"
+  - when: Oct-19
+    visitation: Coriander's and Joe's Garage
+    review_url: /october-2019-corianders-and-joes-garage/
+    service: "4.0"
+    food: "3.9"
+    total: "7.9"
+  - when: Sep-19
+    visitation: Bolina Indian Sweets & Restaurant and Mama Hooch
+    review_url: /september-2019-bolina-indian-sweets-restaurant-and-mama-hooch/
+    service: "4.0"
+    food: "4.3"
+    total: "8.3"
+  - when: Aug-19
+    visitation: Nilesh Palace Indian Cuisine and Armadillo’s
+    review_url: /august-2019-nilesh-palace-indian-cuisine-and-armadillos-t/
+    service: "4.6"
+    food: "4.4"
+    total: "9.0"
+  - when: Jul-19
+    visitation: Delhi Belly and The Bog
+    review_url: /july-2019-delhi-belly-and-the-bog/
+    service: "4.0"
+    food: "4.3"
+    total: "8.3"
+  - when: Jun-19
+    visitation: Touch the Taste of India and Speights Ale House
+    review_url: /june-2019-touch-the-taste-of-india-and-speights-ale-house/
+    service: "3.0"
+    food: "4.1"
+    total: "7.1"
+  - when: May-19
+    visitation: Permit Room and OGB
+    review_url: /may-2019-permit-room-and-o-b-g-bar/
+    service: "4.4"
+    food: "3.3"
+    total: "7.7"
+  - when: Apr-19
+    visitation: Own Masala and Clink
+    review_url: /april-2019-own-masala-and-clink-bar/
+    service: "3.5"
+    food: "3.8"
+    total: "7.3"
+  - when: Mar-19
+    visitation: Indian Fendalton and Misceo Cafe & Bar
+    review_url: /march-2019-indian-fendalton-and-misceo-cafe-bar/
+    service: "4.7"
+    food: "4.4"
+    total: "9.1"
+  - when: Feb-19
+    visitation: Mushroom and The Craic Irish Bar
+    review_url: /february-2019-mushroom-and-the-craic-irish-bar/
+    service: "3.3"
+    food: "3.7"
+    total: "7.0"
+  - when: Jan-19
+    visitation: Two Fat Indians and Cleaver & Co.
+    review_url: /january-2019-two-fat-indians-and-cleaver-co/
+    service: "4.0"
+    food: "4.3"
+    total: "8.3"
+  - when: Dec-18
+    visitation: Mumbaiwala & The Craft Embassy
+    review_url: /december-2018-mumbaiwala-and-the-craft-embassy/
+    service: "4.0"
+    food: "4.3"
+    total: "8.3"
+  - when: Nov-18 Annual Outing
+    visitation: Plaza Indian Restaurant & Tandoor & Cafe Cortado
+    review_url: ""
+    service: "3.5"
+    food: "3.0"
+    total: "6.5"
+  - when: Nov-18 Annual Outing
+    visitation: Kaikoura Indian Restaurant
+    review_url: ""
+    service: "3.0"
+    food: "3.3"
+    total: "6.3"
+  - when: Nov-18
+    visitation: Arjee Bhajee & Volstead
+    review_url: /november-2018-arjee-bhajee-and-volstead/
+    service: "4.0"
+    food: "3.8"
+    total: "7.8"
+  - when: Oct-18
+    visitation: Ferry Indians & The Brewery
+    review_url: /october-2018-ferry-indians-and-the-brewery/
+    service: "3.7"
+    food: "3.7"
+    total: "7.4"
+  - when: Sep-18
+    visitation: Own Masala & Clink
+    review_url: /september-2018-own-masala-and-clink/
+    service: "3.7"
+    food: "4.3"
+    total: "8.0"
+  - when: Aug-18
+    visitation: Saket & Baillies Bar
+    review_url: /august-2018-saket-and-bailies-bar/
+    service: "3.7"
+    food: "3.4"
+    total: "7.1"
+  - when: Jul-18
+    visitation: Royal Tandoor & Joe's Garage
+    review_url: /july-2018-royal-tandoor-and-joes-garage/
+    service: "4.2"
+    food: "4.2"
+    total: "8.4"
+  - when: Jun-18
+    visitation: Little India (Spitfire Sq) & Lonestar
+    review_url: /june-2018-little-india-spitfire-sq-and-lonestar/
+    service: "4.4"
+    food: "4.2"
+    total: "8.6"
+  - when: May-18
+    visitation: South of India & Pierside Cafe & Bar
+    review_url: /may-2018-south-of-india-and-pierside-cafe-bar/
+    service: "4.2"
+    food: "4.5"
+    total: "8.7"
+  - when: Apr-18
+    visitation: Bombay Butler & Belgian Beer Café
+    review_url: /april-2018-bombay-butler-and-belgian-beer-cafe/
+    service: "3.4"
+    food: "4.0"
+    total: "7.4"
+  - when: Mar-18
+    visitation: Tandoori Palace & The Foundry
+    review_url: /march-2018-tandoori-palace-and-the-foundry/
+    service: "4.4"
+    food: "4.0"
+    total: "8.4"
+  - when: Feb-18
+    visitation: Curry Time & Coasters
+    review_url: /february-2018-curry-time-and-coasters/
+    service: "3.8"
+    food: "3.4"
+    total: "7.2"
+  - when: Jan-18
+    visitation: Coriander's (St Asaph St.) & Baretta Bar
+    review_url: /january-2018-corianders-and-baretta-bar/
+    service: "1.2"
+    food: "3.3"
+    total: "4.5"
+  - when: Jan-25
+    visitation: Arjee Bhajee & Volstead
+    service: "4.5"
+    food: "4.8"
+    total: "9.3"
