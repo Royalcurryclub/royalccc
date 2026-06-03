@@ -11,6 +11,12 @@ display_url: https://royalccc.net
 site_url: https://royalccc.net
 logo_url: https://royalccc.net/assets/img/favicon-512.png
 
+# Generate clean URL slugs (no en-dashes, no diacritics)
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
 
   # ============================================================
@@ -41,7 +47,7 @@ collections:
       - label: "Publish date"
         name: "date"
         widget: "datetime"
-        format: "YYYY-MM-DD'T'HH:mm:ssZ"
+        format: "YYYY-MM-DD HH:mm:ss"
         date_format: "DD MMM YYYY"
         time_format: false
         picker_utc: false
@@ -102,9 +108,9 @@ collections:
             label_singular: "visitation"
             summary: "{{fields.sitting}} – {{fields.when}} – {{fields.curry}}"
             fields:
-              - { label: "Sitting #", name: "sitting", widget: "string", hint: "Just a number, increment by 1 from the last row. Example: '140'" }
-              - { label: "When", name: "when", widget: "string", hint: "Format: 'Mon YYYY'. Example: 'May 2026'. For Annual Outings: 'Nov 2026 Annual Outing'" }
-              - { label: "Curry establishment", name: "curry", widget: "string", hint: "Just the restaurant name. Example: 'Saket'" }
+              - { label: "Sitting #", name: "sitting", widget: "string", pattern: ['^\d+[a-z]?$', "Just a number (e.g. 140). 20a-style entries are allowed for cancellations."], hint: "Just a number, increment by 1 from the last row. Example: '140'" }
+              - { label: "When", name: "when", widget: "string", pattern: ['^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}( Annual Outing)?$', "Format: 'Mon YYYY' or 'Mon YYYY Annual Outing'. Examples: 'May 2026', 'Nov 2026 Annual Outing'"], hint: "Format: 'Mon YYYY'. Example: 'May 2026'. For Annual Outings: 'Nov 2026 Annual Outing'" }
+              - { label: "Curry establishment", name: "curry", widget: "string", hint: "Just the restaurant name. Example: 'Saket'. Use the same spelling as previous visits to the same place (so Hall of Fame groups them correctly)." }
               - { label: "Where", name: "where", widget: "string", hint: "Street address. Example: '76 Edgeware Rd'" }
               - { label: "Before/After drinks", name: "drinks", widget: "string", hint: "Just the bar name. Example: 'Bailies Bar'" }
 
@@ -122,9 +128,9 @@ collections:
             label_singular: "score"
             summary: "{{fields.when}} – {{fields.visitation}} ({{fields.total}}/10)"
             fields:
-              - { label: "When", name: "when", widget: "string", hint: "Format: 'Mon-YY' (note the dash and 2-digit year). Example: 'Jul-25'" }
-              - { label: "Visitation", name: "visitation", widget: "string", hint: "Restaurant & Bar combined. Example: 'Saket & Bailies Bar'" }
-              - { label: "Review URL", name: "review_url", widget: "string", required: false, hint: "Optional. The URL slug of the matching review post. Example: '/july-2025-saket-bailies-bar/'. Leave blank if no review exists yet." }
+              - { label: "When", name: "when", widget: "string", pattern: ['^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-\d{2}( Annual Outing)?$', "Format: 'Mon-YY' or 'Mon-YY Annual Outing'. Examples: 'May-26', 'Nov-26 Annual Outing'"], hint: "Format: 'Mon-YY' (note the dash and 2-digit year). Example: 'Jul-25'" }
+              - { label: "Visitation", name: "visitation", widget: "string", pattern: ['^[^/].+$', "Restaurant & Bar name combined. Must NOT start with a slash. Example: 'Saket & Bailies Bar'"], hint: "Restaurant & Bar combined. Example: 'Saket & Bailies Bar'. Use the same spelling as the Visitations table." }
+              - { label: "Review URL", name: "review_url", widget: "string", required: false, pattern: ['^(\/[a-z0-9-]+\/)?$', "Empty OR a URL slug starting and ending with /, using only lowercase letters, numbers, and hyphens. No spaces. Example: '/july-2025-saket-bailies-bar/'"], hint: "Optional. The URL slug of the matching review post. Example: '/july-2025-saket-bailies-bar/'. Leave blank if no review exists yet. Must start AND end with '/'." }
               - { label: "Service /5", name: "service", widget: "string", pattern: ['^[0-5](\.[0-9])?$', "Number from 0 to 5"], hint: "Example: 4.5" }
               - { label: "Food /5", name: "food", widget: "string", pattern: ['^[0-5](\.[0-9])?$', "Number from 0 to 5"], hint: "Example: 4.3" }
               - { label: "Total /10", name: "total", widget: "string", pattern: ['^([0-9]|10)(\.[0-9])?$', "Number from 0 to 10"], hint: "Example: 8.8 (Service + Food)" }
