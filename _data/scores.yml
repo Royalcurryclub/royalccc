@@ -554,3 +554,8 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
+  - when: Apr-25
+    visitation: Indian Springs Eatery & Speights Alehouse
+    service: "4.3"
+    food: "4.0"
+    total: "8.3"
