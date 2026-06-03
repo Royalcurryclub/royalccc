@@ -11,10 +11,11 @@ scores:
     food: "4.0"
     total: "7.8"
   - when: Mar-26
-    visitation: Indian Restaurant & Kava Lounge & The Church Pub
+    visitation: /march-2026-indian-restaurant-kava-lounge-the-church-pub/
     service: "4.8"
     food: "4.7"
     total: "9.5"
+    review_url: Indian Restaurant & Kava Lounge & The Church Pub
   - when: Feb-26
     visitation: Arjee Bharjee & Volstead
     service: "3.4"
