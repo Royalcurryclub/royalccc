@@ -1,701 +1,706 @@
 visitations:
-- sitting: '01'
-  when: Jun 2015
-  curry: Coriander's
-  where: 222 St Asaph St
-  drinks: Engineers Bar
-- sitting: '02'
-  when: Jul 2015
-  curry: Spice 'n' Life
-  where: 392 Riccarton Rd
-  drinks: Joe's Garage
-- sitting: '03'
-  when: Aug 2015
-  curry: Little India
-  where: 150 Aikmans Rd
-  drinks: Aikmans
-- sitting: '04'
-  when: Sep 2015
-  curry: Bombay Butler
-  where: 300 Colombo St
-  drinks: Belgian Beer Café Torenhof
-- sitting: '05'
-  when: Oct 2015
-  curry: Arjee Bhajee
-  where: 13 Riccarton Rd
-  drinks: The Running Bull
-- sitting: '06'
-  when: Nov 2015
-  curry: Mayur Indian Restaurant
-  where: 105 Riccarton Rd
-  drinks: Fox and Ferret
-- sitting: '07'
-  when: Dec 2015
-  curry: Himalayas
-  where: 830A Colombo St
-  drinks: Mama Hooch
-- sitting: 08
-  when: Jan 2016
-  curry: Pepper Bridge
-  where: 300 Lincoln Rd
-  drinks: Morrell & Co
-- sitting: 09
-  when: Feb 2016
-  curry: Indian Fendalton
-  where: 250 Clyde Rd
-  drinks: Misceo Cafe & Bar
-- sitting: '10'
-  when: Mar 2016
-  curry: Maharaja Indian Restaurant
-  where: 452 Papanui Rd
-  drinks: SapporoGold
-- sitting: '11'
-  when: Apr 2016
-  curry: Coriander's
-  where: 222 St Asaph St
-  drinks: Stranges Lane
-- sitting: '12'
-  when: May 2016
-  curry: Indian Sumner CBD
-  where: 185 Manchester St
-  drinks: Stock Exchange
-- sitting: '13'
-  when: Jun 2016
-  curry: Everest Indian Restaurant
-  where: 2 London St, Lyttelton
-  drinks: Civil & Naval
-- sitting: '14'
-  when: Jul 2016
-  curry: La Tandoor
-  where: 114 Marshland Rd
-  drinks: O’Shea’s Public House
-- sitting: '15'
-  when: Aug 2016
-  curry: Mumbaiwala
-  where: 120 Hereford St
-  drinks: Rock Pool
-- sitting: '16'
-  when: Sep 2016
-  curry: Indian Ocean
-  where: 23 Humphreys Dr
-  drinks: Watershed Bar
-- sitting: '17'
-  when: Oct 2016
-  curry: Ferry Indians
-  where: 2/596 Ferry Rd
-  drinks: Twisted Hop
-- sitting: '18'
-  when: Nov 2016
-  curry: Coriander's
-  where: 364 Riccarton Rd
-  drinks: Joe's Garage
-- sitting: '19'
-  when: Nov 2016 Annual Outing
-  curry: Afghan Restaurant
-  where: 316 Lincoln Rd
-  drinks: NZvPAK Test/Lincoln Rd
-- sitting: '20'
-  when: Dec 2016
-  curry: Veenuz
-  where: 575 Springs Rd, Prebbleton
-  drinks: Prebbleton Tavern
-- sitting: 20a
-  when: Jan 2017
-  curry: '---'
-  where: '---'
-  drinks: '---'
-- sitting: '21'
-  when: Feb 2017
-  curry: Indian Pearl
-  where: 352 Colombo St
-  drinks: Belgian Beer Café Torenhof
-- sitting: '22'
-  when: Mar 2017
-  curry: Delhi Belly
-  where: 53 Victoria St
-  drinks: The Bog
-- sitting: '23'
-  when: Apr 2017
-  curry: Taj Of India
-  where: 458 Colombo St
-  drinks: Churchill’s tavern
-- sitting: '24'
-  when: May 2017
-  curry: Himalayas
-  where: 830A Colombo St
-  drinks: Mama Hooch
-- sitting: '25'
-  when: Jun 2017
-  curry: Coriander's
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '26'
-  when: Jul 2017
-  curry: Little India
-  where: 4/7 Halswell Rd
-  drinks: Bills Bar and Bistro
-- sitting: '27'
-  when: Aug 2017
-  curry: Curry in Hurry
-  where: 4/347 Moorhouse Ave
-  drinks: Winnie Bagoes
-- sitting: '28'
-  when: Sep 2017
-  curry: Indian Sumner
-  where: 11A Wakefield Ave
-  drinks: Joe's Garage
-- sitting: '29'
-  when: Oct 2017
-  curry: Mayur Indian Restaurant
-  where: 105 Riccarton Rd
-  drinks: Fox and Ferret
-- sitting: '30'
-  when: Nov 2017
-  curry: Pepper Bridge
-  where: 300 Lincoln Rd
-  drinks: Morrell & Co
-- sitting: '31'
-  when: Nov 2017 Annual Outing
-  curry: Indian Pearl
-  where: 352 Colombo St
-  drinks: Tai Tapu Hotel / Welles Street
-- sitting: '32'
-  when: Dec 2018
-  curry: Mumbaiwala
-  where: 120 Hereford St
-  drinks: Fat Eddies
-- sitting: '33'
-  when: Jan 2018
-  curry: Coriander's
-  where: 222 St Asaph St
-  drinks: Baretta Bar
-- sitting: '34'
-  when: Feb 2018
-  curry: Curry Time
-  where: 284 A Main North Rd
-  drinks: Coasters
-- sitting: '35'
-  when: Mar 2018
-  curry: Tandoori Palace
-  where: 71 Ilam Rd
-  drinks: The Foundry
-- sitting: '36'
-  when: Apr 2018
-  curry: Bombay Butler
-  where: 300 Colombo St
-  drinks: Belgian Beer Café Torenhof
-- sitting: '37'
-  when: May 2018
-  curry: South of India
-  where: 217 Marine Parade
-  drinks: Pierside Cafe & Bar
-- sitting: '38'
-  when: Jun 2018
-  curry: Little India
-  where: 544 Memorial Ave
-  drinks: Lonestar
-- sitting: '39'
-  when: Jul 2018
-  curry: Royal Tandoor
-  where: 478 Cranford St
-  drinks: Joe's Garage
-- sitting: '40'
-  when: Aug 2018
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '41'
-  when: Sep 2018
-  curry: Own Masala
-  where: 1 Wakefield Ave
-  drinks: Clink
-- sitting: '42'
-  when: Oct 2018
-  curry: Ferry Indians
-  where: 2/596 Ferry Rd
-  drinks: The Brewery
-- sitting: '43'
-  when: Nov 2018
-  curry: Arjee Bhajee
-  where: 13 Riccarton Rd
-  drinks: Volstead
-- sitting: '44'
-  when: Nov 2018 Annual Outing
-  curry: Kaikoura Indian Restaurant
-  where: 17 Beach Rd, Kaikoura
-  drinks: '---'
-- sitting: '45'
-  when: Nov 2018 Annual Outing
-  curry: Plaza Indian Restaurant & Tandoor
-  where: 68 High St, Picton
-  drinks: Cafe Cortado
-- sitting: '46'
-  when: Dec 2018
-  curry: Mumbaiwala
-  where: 120 Hereford St
-  drinks: The Craft Embassy
-- sitting: '47'
-  when: Jan 2019
-  curry: Two Fat Indians
-  where: 617 Colombo St
-  drinks: Cleaver & Co.
-- sitting: '48'
-  when: Feb 2019
-  curry: Mushroom
-  where: 96 Riccarton Rd
-  drinks: The Craic Irish Bar
-- sitting: '49'
-  when: Mar 2019
-  curry: Indian Fendalton
-  where: 250 Clyde Rd
-  drinks: Misceo Cafe & Bar
-- sitting: '50'
-  when: Apr 2019
-  curry: Own Masala
-  where: 1 Wakefield Ave
-  drinks: Clink
-- sitting: '51'
-  when: May 2019
-  curry: Permit Room
-  where: 779 Colombo St
-  drinks: OGB
-- sitting: '52'
-  when: Jun 2019
-  curry: Touch
-  where: 2A/2/4 Troup Dr
-  drinks: Speights Ale House
-- sitting: '53'
-  when: Jul 2019
-  curry: Delhi Belly
-  where: 53 Victoria St
-  drinks: The Bog
-- sitting: '54'
-  when: Aug 2019
-  curry: Nilesh Palace Indian Cuisine
-  where: 812 Main North Rd
-  drinks: Armadillo's
-- sitting: '55'
-  when: Sep 2019
-  curry: Bolina Indian Sweets and Restaurant
-  where: 811 Colombo St
-  drinks: Mama Hooch
-- sitting: '56'
-  when: Oct 2019
-  curry: Coriander's
-  where: 364 Riccarton Rd
-  drinks: Joe's Garage
-- sitting: '57'
-  when: Nov 2019
-  curry: Indian Zaika
-  where: 178A Papanui Rd
-  drinks: No.4 Bar
-- sitting: '58'
-  when: Nov 2019 Annual Outing
-  curry: Afghan Restaurant
-  where: 316 Lincoln Rd
-  drinks: Riccarton Races/Lincoln Rd
-- sitting: '59'
-  when: Dec 2019
-  curry: Everest Indian Lyttelton
-  where: 2 London St
-  drinks: Civil & Naval
-- sitting: '60'
-  when: Jan 2020
-  curry: Two Fat Indians
-  where: 617 Colombo St
-  drinks: Dux Central
-- sitting: '61'
-  when: Feb 2020
-  curry: Ministry of Masala
-  where: 185 Manchester St
-  drinks: Smash Palace
-- sitting: '62'
-  when: Mar 2020
-  curry: Cinnamon Spice
-  where: 413 Main South Rd
-  drinks: Temps Bar
-- sitting: '63'
-  when: Apr 2020
-  curry: Corona-Edition 1
-  where: '---'
-  drinks: '---'
-- sitting: '64'
-  when: May 2020
-  curry: Corona-Edition 2
-  where: '---'
-  drinks: '---'
-- sitting: '65'
-  when: Jun 2020
-  curry: Little India
-  where: 150 Aikmans Rd
-  drinks: Aikmans
-- sitting: '66'
-  when: Jul 2020
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '67'
-  when: Aug 2020
-  curry: Roti Chai
-  where: 29 Ensign St
-  drinks: Armadillo's Halswell
-- sitting: '68'
-  when: Sep 2020
-  curry: Samairaz
-  where: 41 Raranga St
-  drinks: Flax Bar and Eatery
-- sitting: '69'
-  when: Oct 2020
-  curry: The Bombay Brasserie
-  where: 74 North Avon Rd
-  drinks: Sideline Sports Bar
-- sitting: '70'
-  when: Nov 2020
-  curry: The Majestic Indian Bistro
-  where: 9 Humphreys Dr
-  drinks: The Tannery
-- sitting: '71'
-  when: Nov 2020 Annual Outing
-  curry: Afghan Restaurant
-  where: 316 Lincoln Rd
-  drinks: Supa Karts/Wigram Brewery
-- sitting: '72'
-  when: Dec 2020
-  curry: Roti Chai
-  where: 29 Ensign St
-  drinks: Armadillo's Halswell
-- sitting: '73'
-  when: Jan 2021
-  curry: Basmati's Indian Eatery
-  where: 185 Manchester St
-  drinks: Pink Lady Rooftop Bar
-- sitting: '74'
-  when: Feb 2021
-  curry: South of India
-  where: 217 Marine Parade
-  drinks: The Penguin Arms
-- sitting: '75'
-  when: Mar 2021
-  curry: The Kingfisher
-  where: 65 The Runway
-  drinks: The Good Home
-- sitting: '76'
-  when: Apr 2021
-  curry: Magic Masala
-  where: 132A Opawa Rd
-  drinks: Cassels
-- sitting: '77'
-  when: May 2021
-  curry: Bombay Butler
-  where: 1 Hamill Rd
-  drinks: The Long Knight
-- sitting: '78'
-  when: Jun 2021
-  curry: Punjabwalla
-  where: 5a Pligrim Pl
-  drinks: Welles Street
-- sitting: '79'
-  when: Jul 2021
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '80'
-  when: Aug 2021
-  curry: Everest Indian Woolston
-  where: 608 Ferry Rd
-  drinks: Woolston Sports Bar
-- sitting: '81'
-  when: Sep 2021
-  curry: Corona-Edition 3
-  where: '---'
-  drinks: '---'
-- sitting: '82'
-  when: Oct 2021
-  curry: Saffron Spice
-  where: 413 Main South Rd
-  drinks: Hornby Working Mens Club
-- sitting: '83'
-  when: Nov 2021
-  curry: Chanakya South Indian Cuisine
-  where: 68 Hawke St
-  drinks: The Penguin Arms
-- sitting: '84'
-  when: Nov 2021 Annual Outing
-  curry: Coriander's City
-  where: 222 Saint Asaph St
-  drinks: Beercycle/The Bog
-- sitting: '85'
-  when: Dec 2021
-  curry: Two Fat Indians Northlink
-  where: 148 Langdons Rd
-  drinks: The Rose and Thistle
-- sitting: '86'
-  when: Jan 2022
-  curry: Mumbaiwala
-  where: 120 Hereford St
-  drinks: The Craft Embassy
-- sitting: '87'
-  when: Feb 2022
-  curry: Chilli Flakes
-  where: 2 Soleares Ave
-  drinks: The Black Pearl Tavern
-- sitting: '88'
-  when: Mar 2022
-  curry: Roti Chai
-  where: 29 Ensign St
-  drinks: Armadillo's Halswell
-- sitting: '89'
-  when: Apr 2022
-  curry: Coriander's Sumner
-  where: 11A Wakefield Ave
-  drinks: Clink
-- sitting: '90'
-  when: May 2022
-  curry: Gorkhali Chulo
-  where: 4/7 Halswell Rd
-  drinks: Bills Bar and Bistro
-- sitting: '91'
-  when: Jun 2022
-  curry: Pothichor
-  where: 251B Riccarton Rd
-  drinks: Joe's Garage
-- sitting: '92'
-  when: Jul 2022
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '93'
-  when: Aug 2022
-  curry: Top in Town
-  where: 91 Riccarton Rd
-  drinks: The Craic
-- sitting: '94'
-  when: Sep 2022
-  curry: Ceylon Kitchen
-  where: 173 Saint Asaph St
-  drinks: Kaiser Brew Garden
-- sitting: '95'
-  when: Oct 2022
-  curry: Himalayas
-  where: 830A Colombo St
-  drinks: Two Thumbs Brewery
-- sitting: '96'
-  when: Nov 2022 Annual Outing
-  curry: Pinch of Spice
-  where: 68 High St, Picton
-  drinks: '---'
-- sitting: '97'
-  when: Dec 2022
-  curry: Delhi Belly
-  where: 53 Victoria St
-  drinks: The Bog
-- sitting: '98'
-  when: Jan 2023
-  curry: Two Fat Indian City
-  where: 4/88 Cashel St
-  drinks: Craft Embassy
-- sitting: '99'
-  when: Feb 2023
-  curry: Delhi 6
-  where: 5/245 Ferry Rd
-  drinks: 12 Bar
-- sitting: '100'
-  when: Mar 2023
-  curry: Saket Prebbleton
-  where: 563 Springs Rd
-  drinks: The Good Home
-- sitting: '101'
-  when: Apr 2023
-  curry: Bombay Butler
-  where: 300 Colombo St
-  drinks: Moon Under Water
-- sitting: '102'
-  when: May 2023
-  curry: Indian Ocean
-  where: 4/23 Humphreys Dr
-  drinks: Craft Beer Kitchen
-- sitting: '103'
-  when: Jun 2023
-  curry: Indian Roots
-  where: 1 Hamill Rd
-  drinks: The Long Knight
-- sitting: '104'
-  when: Jul 2023
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '105'
-  when: Aug 2023
-  curry: Corianders Prestons
-  where: 11/436 Prestons Rd
-  drinks: Rowdy Kitchen
-- sitting: '106'
-  when: Sep 2023
-  curry: Indian Pearl
-  where: 352 Colombo St
-  drinks: Two Thumbs Brewery
-- sitting: '107'
-  when: Oct 2023
-  curry: Basmati's Indian Eatery
-  where: 185 Manchester St
-  drinks: Paddy McNaughton's Irish Bar
-- sitting: '108'
-  when: Nov 2023
-  curry: Indian Zaika
-  where: 178A Papanui Rd
-  drinks: Sprig + Fern
-- sitting: '109'
-  when: Nov 2023 Annual Outing
-  curry: Afghan Restaurant
-  where: 316 Lincoln Rd
-  drinks: South Island Beerfest
-- sitting: '110'
-  when: Dec 2023
-  curry: Saket Prebbleton
-  where: 563 Springs Rd
-  drinks: The Good Home
-- sitting: '111'
-  when: Jan 2024
-  curry: Mumbaiwala
-  where: 120 Hereford St
-  drinks: Mr Brightside Rooftop Bar
-- sitting: '112'
-  when: Feb 2024
-  curry: The Bombay Brasserie
-  where: 74 North Avon Rd
-  drinks: Sideline Sports Bar
-- sitting: '113'
-  when: Mar 2024
-  curry: MG Road Eatery
-  where: 467 Colombo St
-  drinks: Two Thumbs Brewery
-- sitting: '114'
-  when: Apr 2024
-  curry: Coriander's Sumner
-  where: 11A Wakefield Ave
-  drinks: Trev's Man Cave
-- sitting: '115'
-  when: May 2024
-  curry: Pepper Bridge
-  where: 300 Lincoln Rd
-  drinks: The Miller
-- sitting: '116'
-  when: Jun 2024
-  curry: Coriander's Rolleston
-  where: 70 Rolleston Dr
-  drinks: Drafters Bar
-- sitting: '117'
-  when: Jul 2024
-  curry: Saket
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '118'
-  when: Aug 2024
-  curry: Tudor's Restaurant and Bar
-  where: 88 Papanui Rd
-  drinks: The Bar @ Tudor's
-- sitting: '119'
-  when: Sep 2024
-  curry: Gunpowder Indian Restaurant and Bar
-  where: 53 Victoria St
-  drinks: The Jolly Poacher
-- sitting: '120'
-  when: Oct 2024
-  curry: Indian Zaika
-  where: 231 Papanui Rd
-  drinks: No.4 Bar
-- sitting: '121'
-  when: Nov 2024
-  curry: Perfect Plate
-  where: 18 Marshland Rd
-  drinks: Fox & Ferret
-- sitting: '122'
-  when: Nov 2024 Annual Outing
-  curry: Saket Prebbleton
-  where: 563 Springs Rd
-  drinks: NZ vs England Test/Punky Brewster
-- sitting: '123'
-  when: Dec 2024
-  curry: Indian Fendalton
-  where: 250 Clyde Rd
-  drinks: Misceo Cafe & Bar
-- sitting: '124'
-  when: Jan 2025
-  curry: Arjee Bhajee
-  where: 13 Riccarton Rd
-  drinks: Volstead
-- sitting: '125'
-  when: Feb 2025
-  curry: Gorkhali Chulo
-  where: 4/7 Halswell Rd
-  drinks: Bills Bar and Bistro
-- sitting: '126'
-  when: Mar 2025
-  curry: MG Road Eatery
-  where: 467 Colombo St
-  drinks: Two Thumbs Brewery
-- sitting: '127'
-  when: Apr 2025
-  curry: Indian Springs Eatery
-  where: 4 Troup Dr
-  drinks: Speights Ale House
-- sitting: '128'
-  when: May 2025
-  curry: Saket Opawa
-  where: 132a Opawa Rd
-  drinks: Cassels
-- sitting: '129'
-  when: Jun 2025
-  curry: Welcome India
-  where: 7/101 Main North Rd
-  drinks: Rose & Thistle
-- sitting: '130'
-  when: Jul 2025
-  curry: Saket Indian Restaurant
-  where: 76 Edgeware Rd
-  drinks: Bailies Bar
-- sitting: '131'
-  when: Aug 2025
-  curry: Indian Moments
-  where: 114 Marshland Rd
-  drinks: Stock Exchange
-- sitting: '132'
-  when: Sep 2025
-  curry: Ceylon Kitchen
-  where: 91 Riccarton Rd
-  drinks: Volstead
-- sitting: '133'
-  when: Oct 2025
-  curry: Maharajah Indian Restaurant
-  where: 1 Restell St
-  drinks: Rose & Thistle
-- sitting: '134'
-  when: Nov 2025
-  curry: Flavors Kebab & Biriyani
-  where: 65 The Runway
-  drinks: The Good Home
-- sitting: '135'
-  when: Dec 2025
-  curry: Two Fat Indians
-  where: 4/88 Cashel St
-  drinks: The Craft Embassy
-- sitting: '136'
-  when: Jan 2026
-  curry: Coriander's
-  where: 222 St Asaph St
-  drinks: Dux Central
-- sitting: '137'
-  when: Feb 2026
-  curry: Arjee Bhajee
-  where: 13 Riccarton Rd
-  drinks: Volstead
-- sitting: '138'
-  when: Mar 2026
-  curry: Indian Restaurant & Kava Lounge
-  where: 17/113 Worcester St
-  drinks: The Church Pub
-- sitting: '139'
-  when: Apr 2026
-  curry: South of India
-  where: 217 Marine Parade
-  drinks: Southpaw Brewing Company
+  - sitting: "01"
+    when: Jun 2015
+    curry: Coriander's
+    where: 222 St Asaph St
+    drinks: Engineers Bar
+  - sitting: "02"
+    when: Jul 2015
+    curry: Spice 'n' Life
+    where: 392 Riccarton Rd
+    drinks: Joe's Garage
+  - sitting: "03"
+    when: Aug 2015
+    curry: Little India
+    where: 150 Aikmans Rd
+    drinks: Aikmans
+  - sitting: "04"
+    when: Sep 2015
+    curry: Bombay Butler
+    where: 300 Colombo St
+    drinks: Belgian Beer Café Torenhof
+  - sitting: "05"
+    when: Oct 2015
+    curry: Arjee Bhajee
+    where: 13 Riccarton Rd
+    drinks: The Running Bull
+  - sitting: "06"
+    when: Nov 2015
+    curry: Mayur Indian Restaurant
+    where: 105 Riccarton Rd
+    drinks: Fox and Ferret
+  - sitting: "07"
+    when: Dec 2015
+    curry: Himalayas
+    where: 830A Colombo St
+    drinks: Mama Hooch
+  - sitting: 8
+    when: Jan 2016
+    curry: Pepper Bridge
+    where: 300 Lincoln Rd
+    drinks: Morrell & Co
+  - sitting: 9
+    when: Feb 2016
+    curry: Indian Fendalton
+    where: 250 Clyde Rd
+    drinks: Misceo Cafe & Bar
+  - sitting: "10"
+    when: Mar 2016
+    curry: Maharaja Indian Restaurant
+    where: 452 Papanui Rd
+    drinks: SapporoGold
+  - sitting: "11"
+    when: Apr 2016
+    curry: Coriander's
+    where: 222 St Asaph St
+    drinks: Stranges Lane
+  - sitting: "12"
+    when: May 2016
+    curry: Indian Sumner CBD
+    where: 185 Manchester St
+    drinks: Stock Exchange
+  - sitting: "13"
+    when: Jun 2016
+    curry: Everest Indian Restaurant
+    where: 2 London St, Lyttelton
+    drinks: Civil & Naval
+  - sitting: "14"
+    when: Jul 2016
+    curry: La Tandoor
+    where: 114 Marshland Rd
+    drinks: O’Shea’s Public House
+  - sitting: "15"
+    when: Aug 2016
+    curry: Mumbaiwala
+    where: 120 Hereford St
+    drinks: Rock Pool
+  - sitting: "16"
+    when: Sep 2016
+    curry: Indian Ocean
+    where: 23 Humphreys Dr
+    drinks: Watershed Bar
+  - sitting: "17"
+    when: Oct 2016
+    curry: Ferry Indians
+    where: 2/596 Ferry Rd
+    drinks: Twisted Hop
+  - sitting: "18"
+    when: Nov 2016
+    curry: Coriander's
+    where: 364 Riccarton Rd
+    drinks: Joe's Garage
+  - sitting: "19"
+    when: Nov 2016 Annual Outing
+    curry: Afghan Restaurant
+    where: 316 Lincoln Rd
+    drinks: NZvPAK Test/Lincoln Rd
+  - sitting: "20"
+    when: Dec 2016
+    curry: Veenuz
+    where: 575 Springs Rd, Prebbleton
+    drinks: Prebbleton Tavern
+  - sitting: 20a
+    when: Jan 2017
+    curry: ---
+    where: ---
+    drinks: ---
+  - sitting: "21"
+    when: Feb 2017
+    curry: Indian Pearl
+    where: 352 Colombo St
+    drinks: Belgian Beer Café Torenhof
+  - sitting: "22"
+    when: Mar 2017
+    curry: Delhi Belly
+    where: 53 Victoria St
+    drinks: The Bog
+  - sitting: "23"
+    when: Apr 2017
+    curry: Taj Of India
+    where: 458 Colombo St
+    drinks: Churchill’s tavern
+  - sitting: "24"
+    when: May 2017
+    curry: Himalayas
+    where: 830A Colombo St
+    drinks: Mama Hooch
+  - sitting: "25"
+    when: Jun 2017
+    curry: Coriander's
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "26"
+    when: Jul 2017
+    curry: Little India
+    where: 4/7 Halswell Rd
+    drinks: Bills Bar and Bistro
+  - sitting: "27"
+    when: Aug 2017
+    curry: Curry in Hurry
+    where: 4/347 Moorhouse Ave
+    drinks: Winnie Bagoes
+  - sitting: "28"
+    when: Sep 2017
+    curry: Indian Sumner
+    where: 11A Wakefield Ave
+    drinks: Joe's Garage
+  - sitting: "29"
+    when: Oct 2017
+    curry: Mayur Indian Restaurant
+    where: 105 Riccarton Rd
+    drinks: Fox and Ferret
+  - sitting: "30"
+    when: Nov 2017
+    curry: Pepper Bridge
+    where: 300 Lincoln Rd
+    drinks: Morrell & Co
+  - sitting: "31"
+    when: Nov 2017 Annual Outing
+    curry: Indian Pearl
+    where: 352 Colombo St
+    drinks: Tai Tapu Hotel / Welles Street
+  - sitting: "32"
+    when: Dec 2018
+    curry: Mumbaiwala
+    where: 120 Hereford St
+    drinks: Fat Eddies
+  - sitting: "33"
+    when: Jan 2018
+    curry: Coriander's
+    where: 222 St Asaph St
+    drinks: Baretta Bar
+  - sitting: "34"
+    when: Feb 2018
+    curry: Curry Time
+    where: 284 A Main North Rd
+    drinks: Coasters
+  - sitting: "35"
+    when: Mar 2018
+    curry: Tandoori Palace
+    where: 71 Ilam Rd
+    drinks: The Foundry
+  - sitting: "36"
+    when: Apr 2018
+    curry: Bombay Butler
+    where: 300 Colombo St
+    drinks: Belgian Beer Café Torenhof
+  - sitting: "37"
+    when: May 2018
+    curry: South of India
+    where: 217 Marine Parade
+    drinks: Pierside Cafe & Bar
+  - sitting: "38"
+    when: Jun 2018
+    curry: Little India
+    where: 544 Memorial Ave
+    drinks: Lonestar
+  - sitting: "39"
+    when: Jul 2018
+    curry: Royal Tandoor
+    where: 478 Cranford St
+    drinks: Joe's Garage
+  - sitting: "40"
+    when: Aug 2018
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "41"
+    when: Sep 2018
+    curry: Own Masala
+    where: 1 Wakefield Ave
+    drinks: Clink
+  - sitting: "42"
+    when: Oct 2018
+    curry: Ferry Indians
+    where: 2/596 Ferry Rd
+    drinks: The Brewery
+  - sitting: "43"
+    when: Nov 2018
+    curry: Arjee Bhajee
+    where: 13 Riccarton Rd
+    drinks: Volstead
+  - sitting: "44"
+    when: Nov 2018 Annual Outing
+    curry: Kaikoura Indian Restaurant
+    where: 17 Beach Rd, Kaikoura
+    drinks: ---
+  - sitting: "45"
+    when: Nov 2018 Annual Outing
+    curry: Plaza Indian Restaurant & Tandoor
+    where: 68 High St, Picton
+    drinks: Cafe Cortado
+  - sitting: "46"
+    when: Dec 2018
+    curry: Mumbaiwala
+    where: 120 Hereford St
+    drinks: The Craft Embassy
+  - sitting: "47"
+    when: Jan 2019
+    curry: Two Fat Indians
+    where: 617 Colombo St
+    drinks: Cleaver & Co.
+  - sitting: "48"
+    when: Feb 2019
+    curry: Mushroom
+    where: 96 Riccarton Rd
+    drinks: The Craic Irish Bar
+  - sitting: "49"
+    when: Mar 2019
+    curry: Indian Fendalton
+    where: 250 Clyde Rd
+    drinks: Misceo Cafe & Bar
+  - sitting: "50"
+    when: Apr 2019
+    curry: Own Masala
+    where: 1 Wakefield Ave
+    drinks: Clink
+  - sitting: "51"
+    when: May 2019
+    curry: Permit Room
+    where: 779 Colombo St
+    drinks: OGB
+  - sitting: "52"
+    when: Jun 2019
+    curry: Touch
+    where: 2A/2/4 Troup Dr
+    drinks: Speights Ale House
+  - sitting: "53"
+    when: Jul 2019
+    curry: Delhi Belly
+    where: 53 Victoria St
+    drinks: The Bog
+  - sitting: "54"
+    when: Aug 2019
+    curry: Nilesh Palace Indian Cuisine
+    where: 812 Main North Rd
+    drinks: Armadillo's
+  - sitting: "55"
+    when: Sep 2019
+    curry: Bolina Indian Sweets and Restaurant
+    where: 811 Colombo St
+    drinks: Mama Hooch
+  - sitting: "56"
+    when: Oct 2019
+    curry: Coriander's
+    where: 364 Riccarton Rd
+    drinks: Joe's Garage
+  - sitting: "57"
+    when: Nov 2019
+    curry: Indian Zaika
+    where: 178A Papanui Rd
+    drinks: No.4 Bar
+  - sitting: "58"
+    when: Nov 2019 Annual Outing
+    curry: Afghan Restaurant
+    where: 316 Lincoln Rd
+    drinks: Riccarton Races/Lincoln Rd
+  - sitting: "59"
+    when: Dec 2019
+    curry: Everest Indian Lyttelton
+    where: 2 London St
+    drinks: Civil & Naval
+  - sitting: "60"
+    when: Jan 2020
+    curry: Two Fat Indians
+    where: 617 Colombo St
+    drinks: Dux Central
+  - sitting: "61"
+    when: Feb 2020
+    curry: Ministry of Masala
+    where: 185 Manchester St
+    drinks: Smash Palace
+  - sitting: "62"
+    when: Mar 2020
+    curry: Cinnamon Spice
+    where: 413 Main South Rd
+    drinks: Temps Bar
+  - sitting: "63"
+    when: Apr 2020
+    curry: Corona-Edition 1
+    where: ---
+    drinks: ---
+  - sitting: "64"
+    when: May 2020
+    curry: Corona-Edition 2
+    where: ---
+    drinks: ---
+  - sitting: "65"
+    when: Jun 2020
+    curry: Little India
+    where: 150 Aikmans Rd
+    drinks: Aikmans
+  - sitting: "66"
+    when: Jul 2020
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "67"
+    when: Aug 2020
+    curry: Roti Chai
+    where: 29 Ensign St
+    drinks: Armadillo's Halswell
+  - sitting: "68"
+    when: Sep 2020
+    curry: Samairaz
+    where: 41 Raranga St
+    drinks: Flax Bar and Eatery
+  - sitting: "69"
+    when: Oct 2020
+    curry: The Bombay Brasserie
+    where: 74 North Avon Rd
+    drinks: Sideline Sports Bar
+  - sitting: "70"
+    when: Nov 2020
+    curry: The Majestic Indian Bistro
+    where: 9 Humphreys Dr
+    drinks: The Tannery
+  - sitting: "71"
+    when: Nov 2020 Annual Outing
+    curry: Afghan Restaurant
+    where: 316 Lincoln Rd
+    drinks: Supa Karts/Wigram Brewery
+  - sitting: "72"
+    when: Dec 2020
+    curry: Roti Chai
+    where: 29 Ensign St
+    drinks: Armadillo's Halswell
+  - sitting: "73"
+    when: Jan 2021
+    curry: Basmati's Indian Eatery
+    where: 185 Manchester St
+    drinks: Pink Lady Rooftop Bar
+  - sitting: "74"
+    when: Feb 2021
+    curry: South of India
+    where: 217 Marine Parade
+    drinks: The Penguin Arms
+  - sitting: "75"
+    when: Mar 2021
+    curry: The Kingfisher
+    where: 65 The Runway
+    drinks: The Good Home
+  - sitting: "76"
+    when: Apr 2021
+    curry: Magic Masala
+    where: 132A Opawa Rd
+    drinks: Cassels
+  - sitting: "77"
+    when: May 2021
+    curry: Bombay Butler
+    where: 1 Hamill Rd
+    drinks: The Long Knight
+  - sitting: "78"
+    when: Jun 2021
+    curry: Punjabwalla
+    where: 5a Pligrim Pl
+    drinks: Welles Street
+  - sitting: "79"
+    when: Jul 2021
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "80"
+    when: Aug 2021
+    curry: Everest Indian Woolston
+    where: 608 Ferry Rd
+    drinks: Woolston Sports Bar
+  - sitting: "81"
+    when: Sep 2021
+    curry: Corona-Edition 3
+    where: ---
+    drinks: ---
+  - sitting: "82"
+    when: Oct 2021
+    curry: Saffron Spice
+    where: 413 Main South Rd
+    drinks: Hornby Working Mens Club
+  - sitting: "83"
+    when: Nov 2021
+    curry: Chanakya South Indian Cuisine
+    where: 68 Hawke St
+    drinks: The Penguin Arms
+  - sitting: "84"
+    when: Nov 2021 Annual Outing
+    curry: Coriander's City
+    where: 222 Saint Asaph St
+    drinks: Beercycle/The Bog
+  - sitting: "85"
+    when: Dec 2021
+    curry: Two Fat Indians Northlink
+    where: 148 Langdons Rd
+    drinks: The Rose and Thistle
+  - sitting: "86"
+    when: Jan 2022
+    curry: Mumbaiwala
+    where: 120 Hereford St
+    drinks: The Craft Embassy
+  - sitting: "87"
+    when: Feb 2022
+    curry: Chilli Flakes
+    where: 2 Soleares Ave
+    drinks: The Black Pearl Tavern
+  - sitting: "88"
+    when: Mar 2022
+    curry: Roti Chai
+    where: 29 Ensign St
+    drinks: Armadillo's Halswell
+  - sitting: "89"
+    when: Apr 2022
+    curry: Coriander's Sumner
+    where: 11A Wakefield Ave
+    drinks: Clink
+  - sitting: "90"
+    when: May 2022
+    curry: Gorkhali Chulo
+    where: 4/7 Halswell Rd
+    drinks: Bills Bar and Bistro
+  - sitting: "91"
+    when: Jun 2022
+    curry: Pothichor
+    where: 251B Riccarton Rd
+    drinks: Joe's Garage
+  - sitting: "92"
+    when: Jul 2022
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "93"
+    when: Aug 2022
+    curry: Top in Town
+    where: 91 Riccarton Rd
+    drinks: The Craic
+  - sitting: "94"
+    when: Sep 2022
+    curry: Ceylon Kitchen
+    where: 173 Saint Asaph St
+    drinks: Kaiser Brew Garden
+  - sitting: "95"
+    when: Oct 2022
+    curry: Himalayas
+    where: 830A Colombo St
+    drinks: Two Thumbs Brewery
+  - sitting: "96"
+    when: Nov 2022 Annual Outing
+    curry: Pinch of Spice
+    where: 68 High St, Picton
+    drinks: ---
+  - sitting: "97"
+    when: Dec 2022
+    curry: Delhi Belly
+    where: 53 Victoria St
+    drinks: The Bog
+  - sitting: "98"
+    when: Jan 2023
+    curry: Two Fat Indian City
+    where: 4/88 Cashel St
+    drinks: Craft Embassy
+  - sitting: "99"
+    when: Feb 2023
+    curry: Delhi 6
+    where: 5/245 Ferry Rd
+    drinks: 12 Bar
+  - sitting: "100"
+    when: Mar 2023
+    curry: Saket Prebbleton
+    where: 563 Springs Rd
+    drinks: The Good Home
+  - sitting: "101"
+    when: Apr 2023
+    curry: Bombay Butler
+    where: 300 Colombo St
+    drinks: Moon Under Water
+  - sitting: "102"
+    when: May 2023
+    curry: Indian Ocean
+    where: 4/23 Humphreys Dr
+    drinks: Craft Beer Kitchen
+  - sitting: "103"
+    when: Jun 2023
+    curry: Indian Roots
+    where: 1 Hamill Rd
+    drinks: The Long Knight
+  - sitting: "104"
+    when: Jul 2023
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "105"
+    when: Aug 2023
+    curry: Corianders Prestons
+    where: 11/436 Prestons Rd
+    drinks: Rowdy Kitchen
+  - sitting: "106"
+    when: Sep 2023
+    curry: Indian Pearl
+    where: 352 Colombo St
+    drinks: Two Thumbs Brewery
+  - sitting: "107"
+    when: Oct 2023
+    curry: Basmati's Indian Eatery
+    where: 185 Manchester St
+    drinks: Paddy McNaughton's Irish Bar
+  - sitting: "108"
+    when: Nov 2023
+    curry: Indian Zaika
+    where: 178A Papanui Rd
+    drinks: Sprig + Fern
+  - sitting: "109"
+    when: Nov 2023 Annual Outing
+    curry: Afghan Restaurant
+    where: 316 Lincoln Rd
+    drinks: South Island Beerfest
+  - sitting: "110"
+    when: Dec 2023
+    curry: Saket Prebbleton
+    where: 563 Springs Rd
+    drinks: The Good Home
+  - sitting: "111"
+    when: Jan 2024
+    curry: Mumbaiwala
+    where: 120 Hereford St
+    drinks: Mr Brightside Rooftop Bar
+  - sitting: "112"
+    when: Feb 2024
+    curry: The Bombay Brasserie
+    where: 74 North Avon Rd
+    drinks: Sideline Sports Bar
+  - sitting: "113"
+    when: Mar 2024
+    curry: MG Road Eatery
+    where: 467 Colombo St
+    drinks: Two Thumbs Brewery
+  - sitting: "114"
+    when: Apr 2024
+    curry: Coriander's Sumner
+    where: 11A Wakefield Ave
+    drinks: Trev's Man Cave
+  - sitting: "115"
+    when: May 2024
+    curry: Pepper Bridge
+    where: 300 Lincoln Rd
+    drinks: The Miller
+  - sitting: "116"
+    when: Jun 2024
+    curry: Coriander's Rolleston
+    where: 70 Rolleston Dr
+    drinks: Drafters Bar
+  - sitting: "117"
+    when: Jul 2024
+    curry: Saket
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "118"
+    when: Aug 2024
+    curry: Tudor's Restaurant and Bar
+    where: 88 Papanui Rd
+    drinks: The Bar @ Tudor's
+  - sitting: "119"
+    when: Sep 2024
+    curry: Gunpowder Indian Restaurant and Bar
+    where: 53 Victoria St
+    drinks: The Jolly Poacher
+  - sitting: "120"
+    when: Oct 2024
+    curry: Indian Zaika
+    where: 231 Papanui Rd
+    drinks: No.4 Bar
+  - sitting: "121"
+    when: Nov 2024
+    curry: Perfect Plate
+    where: 18 Marshland Rd
+    drinks: Fox & Ferret
+  - sitting: "122"
+    when: Nov 2024 Annual Outing
+    curry: Saket Prebbleton
+    where: 563 Springs Rd
+    drinks: NZ vs England Test/Punky Brewster
+  - sitting: "123"
+    when: Dec 2024
+    curry: Indian Fendalton
+    where: 250 Clyde Rd
+    drinks: Misceo Cafe & Bar
+  - sitting: "124"
+    when: Jan 2025
+    curry: Arjee Bhajee
+    where: 13 Riccarton Rd
+    drinks: Volstead
+  - sitting: "125"
+    when: Feb 2025
+    curry: Gorkhali Chulo
+    where: 4/7 Halswell Rd
+    drinks: Bills Bar and Bistro
+  - sitting: "126"
+    when: Mar 2025
+    curry: MG Road Eatery
+    where: 467 Colombo St
+    drinks: Two Thumbs Brewery
+  - sitting: "127"
+    when: Apr 2025
+    curry: Indian Springs Eatery
+    where: 4 Troup Dr
+    drinks: Speights Ale House
+  - sitting: "128"
+    when: May 2025
+    curry: Saket Opawa
+    where: 132a Opawa Rd
+    drinks: Cassels
+  - sitting: "129"
+    when: Jun 2025
+    curry: Welcome India
+    where: 7/101 Main North Rd
+    drinks: Rose & Thistle
+  - sitting: "130"
+    when: Jul 2025
+    curry: Saket Indian Restaurant
+    where: 76 Edgeware Rd
+    drinks: Bailies Bar
+  - sitting: "131"
+    when: Aug 2025
+    curry: Indian Moments
+    where: 114 Marshland Rd
+    drinks: Stock Exchange
+  - sitting: "132"
+    when: Sep 2025
+    curry: Ceylon Kitchen
+    where: 91 Riccarton Rd
+    drinks: Volstead
+  - sitting: "133"
+    when: Oct 2025
+    curry: Maharajah Indian Restaurant
+    where: 1 Restell St
+    drinks: Rose & Thistle
+  - sitting: "134"
+    when: Nov 2025
+    curry: Flavors Kebab & Biriyani
+    where: 65 The Runway
+    drinks: The Good Home
+  - sitting: "135"
+    when: Dec 2025
+    curry: Two Fat Indians
+    where: 4/88 Cashel St
+    drinks: The Craft Embassy
+  - sitting: "136"
+    when: Jan 2026
+    curry: Coriander's
+    where: 222 St Asaph St
+    drinks: Dux Central
+  - sitting: "137"
+    when: Feb 2026
+    curry: Arjee Bhajee
+    where: 13 Riccarton Rd
+    drinks: Volstead
+  - sitting: "138"
+    when: Mar 2026
+    curry: Indian Restaurant & Kava Lounge
+    where: 17/113 Worcester St
+    drinks: The Church Pub
+  - sitting: "139"
+    when: Apr 2026
+    curry: South of India
+    where: 217 Marine Parade
+    drinks: Southpaw Brewing Company
+  - sitting: "140"
+    when: May 2026
+    curry: Indian Restaurant and Kava Lounge
+    where: 17/113 Worcester St
+    drinks: The Church Pub
