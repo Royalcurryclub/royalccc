@@ -559,3 +559,8 @@ scores:
     service: "4.3"
     food: "4.0"
     total: "8.3"
+  - when: May-25
+    visitation: Saket Opawa & The Tannery
+    service: "4.3"
+    food: "4.6"
+    total: "8.9"
