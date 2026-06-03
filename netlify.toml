@@ -5,3 +5,9 @@
 [build.environment]
   JEKYLL_ENV = "production"
   RUBY_VERSION = "3.2.2"
+
+# Splash page was removed; redirect old /home/ to root so external bookmarks still work
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301

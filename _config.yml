@@ -23,8 +23,10 @@ exclude:
   - README.md
   - SETUP_GUIDE.md
   - EDITORS_GUIDE.md
+  - ADMIN_GUIDE.md
   - Gemfile
   - Gemfile.lock
+  - netlify.toml
   - node_modules
   - vendor/bundle/
   - vendor/cache/
