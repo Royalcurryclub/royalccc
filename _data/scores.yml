@@ -1,4 +1,9 @@
 scores:
+  - when: Jan-25
+    visitation: Arjee Bhajee & Volstead
+    service: "4.5"
+    food: "4.8"
+    total: "9.3"
   - when: Dec-24
     visitation: Indian Fendalton & Misceos
     review_url: /december-2024-indian-fendalton-misceos/
@@ -539,8 +544,3 @@ scores:
     service: "1.2"
     food: "3.3"
     total: "4.5"
-  - when: Jan-25
-    visitation: Arjee Bhajee & Volstead
-    service: "4.5"
-    food: "4.8"
-    total: "9.3"
