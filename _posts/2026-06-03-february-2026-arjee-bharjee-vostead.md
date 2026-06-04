@@ -1,5 +1,5 @@
 ---
-title: February 2026 – Arjee Bharjee & Vostead
+title: February 2026 – Arjee Bharjee & Volstead
 date: 2026-06-04 00:00:00
 address: 13 Riccarton Rd
 service: "3.4"
