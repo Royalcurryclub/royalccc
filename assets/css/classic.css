@@ -1131,3 +1131,49 @@ a.hof-name:hover {
   .hof-list li:before { width: 22px; }
   .hof-count { min-width: 48px; font-size: 16px; }
 }
+
+/* ============================================
+   HALL OF FAME — JALFREZI INDEX
+   ============================================ */
+
+.jalfrezi-stat {
+  text-align: center;
+  margin: 32px 0 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+}
+
+.jalfrezi-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(64px, 10vw, 96px);
+  color: #6B1E1E;
+  line-height: 1;
+}
+
+.jalfrezi-of {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #8B6914;
+}
+
+.jalfrezi-note {
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #4A2C1A;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.jalfrezi-note strong {
+  color: #6B1E1E;
+  font-style: normal;
+  font-weight: 500;
+}

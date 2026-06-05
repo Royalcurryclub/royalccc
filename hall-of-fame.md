@@ -159,6 +159,37 @@ After {{ visit_count }} sittings of curry, beer, and questionable behaviour, her
   </ol>
 </section>
 
+<section class="hof-section hof-jalfrezi">
+  <h2>The Jalfrezi Index</h2>
+
+  {%- comment -%}
+    Count posts mentioning Jalfrezi in any spelling.
+    Using "jalfr" as the substring captures every plausible variant
+    (Jalfrezi, Jalfrezee, Jalfrazi, Jhalfrezi, etc.) — no English word
+    other than Jalfrezi-style names starts with these five letters.
+    Match is case-insensitive via downcasing the content first.
+  {%- endcomment -%}
+  {%- assign jalfrezi_posts = 0 -%}
+  {%- assign total_posts = site.posts | size -%}
+  {%- for post in site.posts -%}
+    {%- assign lower = post.content | downcase -%}
+    {%- if lower contains "jalfr" -%}
+      {%- assign jalfrezi_posts = jalfrezi_posts | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <div class="jalfrezi-stat">
+    <span class="jalfrezi-number">{{ jalfrezi_posts }}</span>
+    <span class="jalfrezi-of">of {{ total_posts }} reviews</span>
+  </div>
+
+  <p class="jalfrezi-note">
+    The noble Jalfrezi has been ordered in <strong>{{ jalfrezi_posts }}</strong>
+    of the {{ total_posts }} written reviews &mdash; a number that, by all reasonable accounts,
+    will only continue to climb. The responsible party is well known to this club but shall not be named here.
+  </p>
+</section>
+
 <section class="hof-section">
   <h2>Average score by year</h2>
   <table class="hof-year-table">
