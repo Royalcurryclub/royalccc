@@ -1,4 +1,9 @@
 scores:
+  - when: Jun-26
+    visitation: "Indian Zaika & No.4 Bar "
+    service: "4.3"
+    food: "4.3"
+    total: "8.6"
   - when: May-26
     visitation: Bombay Brasserie & Sideline Sports Bar
     food: "3.8"
