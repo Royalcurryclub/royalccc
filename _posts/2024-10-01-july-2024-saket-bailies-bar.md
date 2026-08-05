@@ -1,20 +1,19 @@
 ---
-id: 1754
-title: 'July 2024 – Saket & Bailies Bar'
-date: '2024-10-01T20:01:48+13:00'
-author: 'RoyalCCC Reviewer'
+guid: http://royalccc.net/?p=1754
+title: July 2024 – Saket & Bailies Bar
+date: 2024-10-01T20:01:48+13:00
+author: RoyalCCC Reviewer
 layout: post
-guid: 'http://royalccc.net/?p=1754'
 permalink: /july-2024-saket-bailies-bar/
+id: 1754
 categories:
-    - Reviews
+  - Reviews
 ---
+Another year clicks over and before you know it, it’s July and time for the annual mid-winter Currymass event. The theme of this year’s event was Bollywood and blazers and everyday wear were on on display. After warmup beers and hanging around for the meat raffle at Bailies Bar, which to no-ones surprise, was won by a local, the RCCC gentlemen assembled at Saket.
 
-Another year clicks over and before you know it, it’s July and time for the annual mid-winter Currymas event. The theme of this year’s event was Bollywood and blazers and everyday wear were on on display. After warmup beers and hanging around for the meat raffle at Bailies Bar, which to no-ones surprise, was won by a local, the RCCC gentlemen assembled at Saket.
+Once the obligatory seat swapping and furniture re-arranging was complete, the Currymass could begin. Our seating was less in the centre of the room than last year, no doubt an attempt to ensure we didn’t scare off passing punters looking for somewhere to munch – didn’t work mind! The round or two of cold Kingfisher plus the off mango lassie ensured that the visitation was loud and proud. The Secret Santa session was surprisingly restrained with the quality of the gifts much improved on previous years.
 
-Once the obligatory seat swapping and furniture re-arranging was complete, the Currymas could begin. Our seating was less in the centre of the room than last year, no doubt an attempt to ensure we didn’t scare off passing punters looking for somewhere to munch – didn’t work mind! The round or two of cold Kingfisher plus the off mango lassie ensured that the visitation was loud and proud. The Secret Santa session was surprisingly restained with the quality of the gifts much improved on previous years.
-
-Food and service scores were a little down on last years Currymas. The meat was abit lacking amongst the gravy on more than one dish but the Jalfrezi was perfectly spiced – so it was a bit of a mixed bag. Making up for that was a gratis dessert for everyone which the Banquet Bros were a bit dark about but they’ll get over it.
+Food and service scores were a little down on last years Currymass. The meat was a bit lacking amongst the gravy on more than one dish but the Jalfrezi was perfectly spiced – so it was a bit of a mixed bag. Making up for that was a gratis dessert for everyone which the Banquet Bros were a bit dark about but they’ll get over it.
 
 MD took the FOMO trophy for being a CoTM. The CoTM trophy is currently MIA but will no doubt surface at some stage and promptly be re- awarded back to the current deserved holder.
 
