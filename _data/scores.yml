@@ -1,4 +1,9 @@
 scores:
+  - when: Jul-26
+    visitation: Saket Edgeware & Bailies Bar
+    service: "4.0"
+    food: "4.0"
+    total: "8.0"
   - when: Jun-26
     visitation: "Indian Zaika & No.4 Bar "
     service: "4.3"
