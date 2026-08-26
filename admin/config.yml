@@ -150,7 +150,7 @@ collections:
           - { label: "Title", name: "title", widget: "string", default: "The Royal Curry Club of Christchurch" }
           - { label: "Welcome message", name: "body", widget: "markdown", hint: "The italic introduction paragraph at the top of the home page." }
           - { label: "Layout", name: "layout", widget: "hidden", default: "home" }
-          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/home/" }
 
       - label: "Contact page"
         name: "contact"
