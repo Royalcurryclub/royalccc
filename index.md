@@ -22,7 +22,7 @@ sitemap: false
 
 <p class="landing-emphasis">Malicious software.</p>
 
-<p>The Royal Curry Club does not publish an app. The Maharaja does not solicit cryptocurrency. The Curry-of-the-Month committee will not email you to verify your credentials. There is no premium tier.</p>
+<p>The Royal Curry Club does not publish an app. The Maharaja does not solicit cryptocurrency. The C***-of-the-Month committee will not email you to verify your credentials. There is no premium tier.</p>
 
 <p>Verification of the burgundy crest above is the sole means of establishing authenticity. Accept no substitutes.</p>
 
